@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: docs
 
 book:
   title: "quarto_test"
@@ -10,7 +11,6 @@ book:
     - intro.qmd
     - summary.qmd
     - references.qmd
-output-dir: docs
 
 bibliography: references.bib
 
