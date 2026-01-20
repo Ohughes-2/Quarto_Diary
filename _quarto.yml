@@ -10,6 +10,7 @@ book:
     - intro.qmd
     - summary.qmd
     - references.qmd
+output-dir: docs
 
 bibliography: references.bib
 

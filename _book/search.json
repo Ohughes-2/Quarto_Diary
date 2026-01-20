@@ -10,11 +10,11 @@
     ]
   },
   {
-    "objectID": "index.html#qué-lo-que-mancitos-míos-pero-que-usteded-tán-súpel-bien-diache",
-    "href": "index.html#qué-lo-que-mancitos-míos-pero-que-usteded-tán-súpel-bien-diache",
+    "objectID": "index.html#qué-lo-que-mancitos-míos-pero-que-ustedes-tán-súpel-bien-diache",
+    "href": "index.html#qué-lo-que-mancitos-míos-pero-que-ustedes-tán-súpel-bien-diache",
     "title": "quarto_test",
-    "section": "¿Qué lo que mancitos míos?, ¡’pero que usteded ’tán súpel bien diache!",
-    "text": "¿Qué lo que mancitos míos?, ¡’pero que usteded ’tán súpel bien diache!\n\nf &lt;- 456/34 + sqrt(27)\nprint(round(f,2))\n\n[1] 18.61",
+    "section": "¿Qué lo que mancitos míos?, ¡’pero que ustedes ’tán súpel bien diache!",
+    "text": "¿Qué lo que mancitos míos?, ¡’pero que ustedes ’tán súpel bien diache!\n\nf &lt;- 456/34 + sqrt(27)\nprint(round(f,2))\n\n[1] 18.61",
     "crumbs": [
       "Preface"
     ]
@@ -47,16 +47,6 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
-    ]
-  },
-  {
-    "objectID": "index.html#qué-lo-que-mancitos-míos-pero-que-ustedes-tán-súpel-bien-diache",
-    "href": "index.html#qué-lo-que-mancitos-míos-pero-que-ustedes-tán-súpel-bien-diache",
-    "title": "quarto_test",
-    "section": "¿Qué lo que mancitos míos?, ¡’pero que ustedes ’tán súpel bien diache!",
-    "text": "¿Qué lo que mancitos míos?, ¡’pero que ustedes ’tán súpel bien diache!\n\nf &lt;- 456/34 + sqrt(27)\nprint(round(f,2))\n\n[1] 18.61",
-    "crumbs": [
-      "Preface"
     ]
   }
 ]
