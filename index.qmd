@@ -1,0 +1,16 @@
+# Preface {.unnumbered}
+
+This is a Quarto book.
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+```{r}
+1 + 1
+```
+
+## ¿Qué lo que mancitos míos?, ¡'pero que ustedes 'tán súpel bien diache!
+
+```{r}
+f <- 456/34 + sqrt(27)
+print(round(f,2))
+```
