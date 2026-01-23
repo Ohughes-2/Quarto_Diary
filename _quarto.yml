@@ -3,16 +3,17 @@ project:
   output-dir: docs
 
 book:
-  title: "quarto_test"
-  author: "Norah Jones"
+  title: "Learning Diary"
+  author: "Owen Hughes"
   date: "1/20/2026"
   chapters:
     - index.qmd
+    - Week1.qmd
     - intro.qmd
     - summary.qmd
-    - references.qmd
+    - Chap_References.bib
 
-bibliography: references.bib
+bibliography: Chap_References.bib
 
 format:
   html:
