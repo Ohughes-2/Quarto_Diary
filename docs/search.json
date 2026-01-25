@@ -74,7 +74,7 @@
     "href": "Week2.html",
     "title": "2  Week2: Introduction to Quarto and Xaringan",
     "section": "",
-    "text": "3 Why so Short This Week?\nThis week was dedicated to learning how to use quarto books (the very tool I used for you to read this :D) and Xaringan (the tool used for our future group presentation).\nThe summary, applications, and reflection this week are held within a xaringan presentation and relate to a specific satellite of my choosing. Spoiler Alert: I chose the GEDI LiDAR sensor on the ISS. In any case, I suppose I should stop stalling and let you see the presentation.\n\n3.0.1 Xaringan Presentation\n\nxaringanExtra::embed_xaringan(\n  url = \"https://ohughes-2.github.io/Xaringan_Example/\",\n  ratio = \"16:9\"\n)",
+    "text": "3 Why so Short This Week?\nThis week was dedicated to learning how to use quarto books (the very tool I used for you to read this :D) and Xaringan (the tool used for our future group presentation).\nThe summary, applications, and reflection this week are held within a xaringan presentation and relate to a specific satellite of my choosing. Spoiler Alert: I chose the GEDI LiDAR sensor on the ISS. In any case, I suppose I should stop stalling and let you see the presentation.\n\n3.0.1 Xaringan Presentation",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week2: Introduction to Quarto and Xaringan</span>"
     ]
