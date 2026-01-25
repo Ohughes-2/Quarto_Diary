@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Week 1: Introduction to R.S. – Learning Diary</title>
+<title>2&nbsp; Week2: Introduction to Quarto and Xaringan – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,8 +65,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Week2.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./intro.html" rel="next">
+<link href="./Week1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -89,6 +104,8 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/fitvids-2.1.1/fitvids.min.js"></script>
+
 
 
 </head>
@@ -102,7 +119,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Introduction to R.S.</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week2: Introduction to Quarto and Xaringan</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,13 +152,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Week1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Introduction to R.S.</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week2.html" class="sidebar-item-text sidebar-link">
+  <a href="./Week2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week2: Introduction to Quarto and Xaringan</span></span></a>
   </div>
 </li>
@@ -167,10 +184,10 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">1.2</span> Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">1.4</span> References</a></li>
+  <li><a href="#why-so-short-this-week" id="toc-why-so-short-this-week" class="nav-link active" data-scroll-target="#why-so-short-this-week"><span class="header-section-number">3</span> Why so Short This Week?</a>
+  <ul class="collapse">
+  <li><a href="#xaringan-presentation" id="toc-xaringan-presentation" class="nav-link" data-scroll-target="#xaringan-presentation"><span class="header-section-number">3.0.1</span> Xaringan Presentation</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -179,7 +196,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Introduction to R.S.</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week2: Introduction to Quarto and Xaringan</span></h1>
 </div>
 
 
@@ -196,37 +213,27 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
-<p>This week’s topic was primarily focussed on the introduction to the background science and techniques associated with remote sensing. This included background information on the electromagnetic spectrum and spectral profiles of distinct materials, numerous technologies that one can use to perform remote sensing (R, Python, SNAP, QGIS, ENVI), and the process of sourcing images with satellites, drones, planes and the potential problems experienced during this process like scattering and cloud cover.&nbsp;</p>
-<p>Moving onto the practical, three main sections were of most importance: initial exploratory analysis in SNAP with sentinel imagery, masking a location of interest and creating land use polygons with both sentinel and landsat imagery, and ascertaining the spectral signatures of each land use type in graphical form using R. Performing this week’s practical proved difficult as creating an account with sentinel to download data was not working during the practical session or several days after, though at the time of writing the issue has been solved. This meant that my interaction with the practical was limited to reading through the practical page and understanding the concepts while drawing on experience in a previous remote sensing class during my undergrad to conceptualize the processes in the practical.</p>
-<p><img src="Images/GMU_Campus1.png" class="img-fluid"></p>
-<p><img src="Images/GMU_Campus2.png" class="img-fluid"></p>
-<p>The following images display a true color RGB image of George Mason University in Fairfax, Virginia, USA, and a false color composite image using near infrared, short wave infrared 1, and short wave infrared 2 bands displayed in ENVI created when I was an undergrad.</p>
-<p><img src="Images/DC_Mall3.png" class="img-fluid"></p>
-<p>Additionally, this image displayed a tasseled cap image of the National Mall in Washington DC, also created when I was an undergrad. Because I have already performed many of the actions within this practical, an inability to participate fully was not completely damaging. In fact, even without completing the SNAP portion and merely studying the code, I am still left with a number of valuable lessons and questions. Never had I resampled the resolution of an image and this seems vastly useful for comparative projects, though I still wonder about the real world practicality of apps like ENVI and SNAP as I also have experience with RS in python. I will reflect more on this in the reflection section, but aside from their advantages in image visibility, with the amount of experience that I have, I would always choose either R (based on what I saw in the practical) or python in conjunction with a true GIS (QGIS or Arc (if I had access)).</p>
-</section>
-<section id="applications" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
-<p>Given that this week was quite introductory to both the science and methods of remote sensing, I wanted to include a project that I have worked on outside of the classroom that involved a LiDAR point cloud to create a hillshade model. The <a href="https://www.novasolarmap.com/">Northern Virginia Solar Map</a> (<span class="citation" data-cites="noauthor_home_nodate"><span>“<span>HOME</span> <span></span> Novasolarmap”</span> (<a href="#ref-noauthor_home_nodate" role="doc-biblioref">n.d.</a>)</span>) is a tool developed to estimate the solar energy potential for all buildings in the south western suburbs of Washington DC. The current linked version was developed using data from 2015 and is currently under an update using LiDAR data from 2023, and this update is the part I was a part of. Even though this week’s class mainly focused on spectral signatures, tasseled cap plots, and resampling, the lecture briefly touched on LiDAR point clouds. This project made use of LiDAR point cloud data ascertained from the private sector to create a more accurate digital surface model than one obtained from satellite imagery. Then using ArcGIS, the DSM was clipped to a shapefile of building footprints and a tool was run to determine the solar absorption with respect to roof angle, casted shadows, elevation, azimuth angle, etc for different times of the year. Despite only one element of remote sensing (LiDAR point cloud), this Solar Map has remained successful in increasing the amount of homes and businesses powered by solar energy in Northern Virginia.&nbsp;</p>
-<p>The second application that I want to highlight is more directly linked to our studies this week. <a href="https://www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/S0166516211000164">This Study</a> by <span class="citation" data-cites="schroeter_analyses_2011">Schroeter and Gläβer (<a href="#ref-schroeter_analyses_2011" role="doc-biblioref">2011</a>)</span> displays the utility of spectral signatures to group lakes next to coal mines in Germany by potential exposure to polluting runoff. These lake classifications include “iron buffer, aluminum/iron buffer, aluminum/hydrocarbonate buffer, hydrocarbonate buffer, and carbonate buffer.” Specifically, these buffers (in the order they were written) indicate the dominant chemical controlling the PH of the water in the lake. A lake with high iron levels is extremely acidic and indicates a heavily polluted lake while a lake with high carbonate levels indicates a reclaimed lake with a neutral PH. Because iron, aluminum, hydrocarbons, and carbonates when dissolved in water all have different spectral signatures in the visible color range (that is to say they are different in color to the naked eye), the researchers were able to identify differences in the lakes’ composition without false color composites. This study displays the potential of remote sensing for environmental protection.</p>
-</section>
-<section id="reflection" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
-<p>Considering that I have already taken two remote sensing based classes in undergrad, my main conclusions about this week’s content serve as reaffirmations of lessons that I have previously learned: RS specific apps seem clunky and don’t seem incredibly relevant outside of classrooms and RS seems to be a starting point for many projects rather than the end goal. As mentioned above, I have found both ENVI and now SNAP to be very friendly for initiation into RS as the can create tasseled cap graphs quickly, display movable images, and operate like a GIS, but after seeing the potential of R to make the spectral signature graphs and conduction a rather long flood risk analysis using landsat imagery in python in a previous undergraduate class, I feel that SNAP can serve a great supplementary tool for RS, but I would always gravitate to a R or Python for a larger project. For that reason, I am incredibly excited to learn google earth engine later this term as I hope it can act as a middle ground between the visibility benefits of SNAP and the practicality benefits of python or R. Secondly, one element I have found interesting at every step of my RS education, is that it often forms the baseline for any number of different projects. In the Solar Map, the aim was to support a goal created by the Northern Virginia Regional Commission to increase solar energy consumption in the area, and using LiDAR points to create a DSM was part of that. In the German coal mine study, the goal was to run cluster analysis on the quality of lakes in the region to assess environmental health, and spectral signatures of different pollutants were required to do that. One of the reasons I have enjoyed learning about Remote Sensing over the years is that any single technique may be quite limited in its ability to recognize a particular pattern, with only a single conclusion one can argue for policy change, warn of imminent danger, analyze progress, etc.</p>
-</section>
-<section id="references" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="references"><span class="header-section-number">1.4</span> References</h2>
+<section id="why-so-short-this-week" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Why so Short This Week?</h1>
+<p>This week was dedicated to learning how to use quarto books (the very tool I used for you to read this :D) and Xaringan (the tool used for our future group presentation).</p>
+<p>The summary, applications, and reflection this week are held within a xaringan presentation and relate to a specific satellite of my choosing. <strong>Spoiler Alert</strong>: I chose the GEDI LiDAR sensor on the ISS. In any case, I suppose I should stop stalling and let you see the presentation.</p>
+<section id="xaringan-presentation" class="level3" data-number="3.0.1">
+<h3 data-number="3.0.1" class="anchored" data-anchor-id="xaringan-presentation"><span class="header-section-number">3.0.1</span> Xaringan Presentation</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>xaringanExtra<span class="sc">::</span><span class="fu">embed_xaringan</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">url =</span> <span class="st">"https://ohughes-2.github.io/Xaringan_Example/"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ratio =</span> <span class="st">"16:9"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
+<iframe src="https://ohughes-2.github.io/Xaringan_Example/" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen=""></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+</div>
+</div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-noauthor_home_nodate" class="csl-entry" role="listitem">
-<span>“<span>HOME</span> <span></span> Novasolarmap.”</span> n.d. Accessed January 23, 2026. <a href="https://www.novasolarmap.com/">https://www.novasolarmap.com/</a>.
-</div>
-<div id="ref-schroeter_analyses_2011" class="csl-entry" role="listitem">
-Schroeter, Luise, and Cornelia Gläβer. 2011. <span>“Analyses and Monitoring of Lignite Mining Lakes in <span>Eastern</span> <span>Germany</span> with Spectral Signatures of <span>Landsat</span> <span>TM</span> Satellite Data.”</span> <em>International Journal of Coal Geology</em> 86 (1): 27–39. <a href="https://doi.org/10.1016/j.coal.2011.01.005">https://doi.org/10.1016/j.coal.2011.01.005</a>.
-</div>
-</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -631,13 +638,13 @@ Schroeter, Luise, and Cornelia Gläβer. 2011. <span>“Analyses and Monitoring 
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Owen Hughes:">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Owen Hughes:</span>
+      <a href="./Week1.html" class="pagination-link" aria-label="Week 1: Introduction to R.S.">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Introduction to R.S.</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Week2.html" class="pagination-link" aria-label="Week2: Introduction to Quarto and Xaringan">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week2: Introduction to Quarto and Xaringan</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
