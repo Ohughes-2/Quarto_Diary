@@ -34,7 +34,7 @@
     "href": "Week1.html",
     "title": "1  Introduction to R.S.",
     "section": "",
-    "text": "1.1 Content Summary\nThis week’s topic was primarily focussed on the introduction to the background science and techniques associated with remote sensing. This included background information on the electromagnetic spectrum and spectral profiles of distinct materials, numerous technologies that one can use to perform remote sensing (R, Python, SNAP, QGIS, ENVI), and the process of sourcing images with satellites, drones, planes and the potential problems experienced during this process like scattering and cloud cover.\nMoving onto the practical, three main sections were of most importance: initial exploratory analysis in SNAP with sentinel imagery, masking a location of interest and creating land use polygons with both sentinel and landsat imagery, and ascertaining the spectral signatures of each land use type in graphical form using R. Performing this week’s practical proved difficult as creating an account with sentinel to download data was not working during the practical session or several days after, though at the time of writing the issue has been solved. This meant that my interaction with the practical was limited to reading through the practical page and understanding the concepts while drawing on experience in a previous remote sensing class during my undergrad to conceptualize the processes in the practical.\nThe following images display a true color RGB image of George Mason University in Fairfax, Virginia, USA, and a false color composite image using near infrared, short wave infrared 1, and short wave infrared 2 bands displayed in ENVI created when I was an undergrad.\nAdditionally, this image displayed a tasseled cap image of the National Mall in Washington DC, also created when I was an undergrad. Because I have already performed many of the actions within this practical, an inability to participate fully was not completely damaging. In fact, even without completing the SNAP portion and merely studying the code, I am still left with a number of valuable lessons and questions. Never had I resampled the resolution of an image and this seems vastly useful for comparative projects, though I still wonder about the real world practicality of apps like ENVI and SNAP as I also have experience with RS in python. I will reflect more on this in the reflection section, but aside from their advantages in image visibility, with the amount of experience that I have, I would always choose either R (based on what I saw in the practical) or python in conjunction with a true GIS (QGIS or Arc (if I had access)).",
+    "text": "1.1 Content Summary\nThis week’s topic was primarily focused on the introduction to the background science and techniques associated with remote sensing. This included background information on the electromagnetic spectrum and spectral profiles of distinct materials, numerous technologies that one can use to perform remote sensing (R, Python, SNAP, QGIS, ENVI), and the process of sourcing images with satellites, drones, planes and the potential problems experienced during this process like scattering and cloud cover.\nMoving onto the practical, three main sections were of most importance: initial exploratory analysis in SNAP with sentinel imagery, masking a location of interest and creating land use polygons with both sentinel and landsat imagery, and ascertaining the spectral signatures of each land use type in graphical form using R. Performing this week’s practical proved difficult as creating an account with sentinel to download data was not working during the practical session or several days after, though at the time of writing the issue has been solved. This meant that my interaction with the practical was limited to reading through the practical page and understanding the concepts while drawing on experience in a previous remote sensing class during my undergrad to conceptualize the processes in the practical.\nThe following images display a true color RGB image of George Mason University in Fairfax, Virginia, USA, and a false color composite image using near infrared, short wave infrared 1, and short wave infrared 2 bands displayed in ENVI created when I was an undergrad.\nAdditionally, this image displayed a tasseled cap image of the National Mall in Washington DC, also created when I was an undergrad. Because I have already performed many of the actions within this practical, an inability to participate fully was not completely damaging. In fact, even without completing the SNAP portion and merely studying the code, I am still left with a number of valuable lessons and questions. Never had I resampled the resolution of an image and this seems vastly useful for comparative projects, though I still wonder about the real world practicality of apps like ENVI and SNAP as I also have experience with RS in python. I will reflect more on this in the reflection section, but aside from their advantages in image visibility, with the amount of experience that I have, I would always choose either R (based on what I saw in the practical) or python in conjunction with a true GIS (QGIS or Arc (if I had access)).",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R.S.</span>"
     ]
@@ -90,23 +90,63 @@
     ]
   },
   {
+    "objectID": "Week3.html",
+    "href": "Week3.html",
+    "title": "3  Corrections and Enhancements",
+    "section": "",
+    "text": "3.1 Content Summary\nThe content about corrections for week three comes mostly from the lecture. Four types of image corrections were covered this week: geometric, atmospheric, orthorectification, and radiometric calibration. Geometric Correction involves assigning known ground control locations via regression analysis to a remotely sensed image that does not have a geographic reference system. Atmospheric correction relates to removing blurring in an image caused by light scattering and absorption, either relatively or absolutely. Orthorectification looks to transform an image from the view of a sensor to the view of a map. This involves correcting the value of each pixel by assigning it a nadir view value. Radiometric Calibration involves converting digital numbers (specific to each sensor) that measure the brightness of each pixel into spectral radiance values which measure how much light a sensor picks up for each pixel at a certain band or wavelength.\nThese corrections are vital to a productive remote sensing project, and because of that, most sources of R.S. data will provide pre-corrected images for download. Despite the importance of these processes that create usable imagery, in practice, image enhancements like ratios and filters are more pertinent to relevant remote sensing outputs. Ratio enhancements make use of different spectral signatures across bands to highlight areas of bare soil, healthy vegetation, developed land, etc. Filter enhancements allow the smoothing (low pass) or sharpening (high pass) to diminish or enhance variance across pixels.\nThe most important utility of both image corrections and enhancements is the ability to specify a general image into a more objective means of data collection. Despite this, when considering large areas many enhancements like filtering, PCA, and texturing can be computationally intense. Given that this is my third RS based class, I am quite confident in my understanding of corrections and ratio enhancements, but I found that my understanding of corrections in particular was not clear until I participated in the process. Personally calculating DNs to spectral radiance and applying ground control points to an image helped me understand the concepts of nadir, azimuth, TOA reflectance, radiance, etc. In effect I see pre-corrected data as a great disseminator of RS potential, but also as an obstructor of true understanding.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections and Enhancements</span>"
+    ]
+  },
+  {
+    "objectID": "Week3.html#content-summary",
+    "href": "Week3.html#content-summary",
+    "title": "3  Corrections and Enhancements",
+    "section": "",
+    "text": "Boise, Idaho, USA Landsat 8 Image\n\n\n\n\n\nBoise, Idaho, USA NDVI Image",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections and Enhancements</span>"
+    ]
+  },
+  {
+    "objectID": "Week3.html#applications",
+    "href": "Week3.html#applications",
+    "title": "3  Corrections and Enhancements",
+    "section": "3.2 Applications",
+    "text": "3.2 Applications\n\n3.2.1 Articles\nThe articles I wanted to include this week relate to parts of the practical that I spent the most time working on, ratio and filter enhancements. The first paper by Son Le, Liou, and Pham (2023) uses Landsat imagery and a fairly complex ratio to analyze surface water presence to analyze both potential water scarcity and disease presence in rice fields in Vietnam. The ratio is called the normalized difference latent heat index (NDLI) and it is obtained from this equation:\n\\(NDLI = [Green - Red]/[Green + Red + SWIR]\\)\nThe utility of this ratio was tested against another common method to assess rice crop health and water supply known as SEBAL or surface energy balance algorithm for land. In brief summary, the NDLI (particularly in conjunction with surface temperature measurements) was able to more clearly detect water, vegetation, soil, and tidal regions than the more common SEBAL method. This led to more accurate and proactive analysis of the health of the rice paddies.\nThe second paper by Chen et al. (2022) uses drone/plane imagery and a bilateral filtering technique to balance smoothing and sharpness in images plagued by noise. The first filter is a standard low pass filter with a large kernel width that smooths edges and reduces the effect of “erratic noise” (page 1). The second filter is also a low pass, but with a much smaller kernel width which takes the now reduced-noise-free image and reshapes the edges that we lost in the first pass.\nThe strength of this method is tested against other bilateral filters that only pass one time. In short, the two pass filter produced images that were both free of noise and had sharp edges where pixel variance was high (something missing from the other methods). Notably though, the authors do highlight the increased computation time of the two pass filters.\n\n\n3.2.2 Thoughts\nThe main theme that I see in this research is that, although both paper describe a notable improvement in an RS method, they are not trying to reinvent the wheel or completely change our way of thought. Son Le, Liou, and Pham (2023) still focus on well known ratio methods, they just find a better one for their situation. equally, Chen et al. (2022) apply known filtering methods, just with an improvement. Even in the lecture we saw that dark object subtraction was under some scrutiny, not because it’s pointless, but because other methods are better and just as simple to implement.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections and Enhancements</span>"
+    ]
+  },
+  {
+    "objectID": "Week3.html#reflection",
+    "href": "Week3.html#reflection",
+    "title": "3  Corrections and Enhancements",
+    "section": "3.3 Reflection",
+    "text": "3.3 Reflection\nIn the previous section, much of the covered topics reflect the more objective utility of remote sensing as a tool for scientific output, and this is incredibly important. However, a part of the lecture and practical that I haven’t touched on yet seems most relevant to this section: the blurring of RS from science into art. From the beginning, the display of an image is key to the understanding of effectively every process covered so far. The goal of corrections is to display the image as true to the materials captured as possible, the point of ratios is to display where certain attributes are most prominent, textures allows us to display certain features with an emphasis on their importance to out use case, and even a simple false color composite changes the understanding of an image by changing the display. To me, it seems that the visual nature of remote sensing makes the processes one decides to use in a project inherently subjective. The overarching goal change from, how do I share my findings, to, how can I show my findings? With that said, I found that the R studio code for the practical to be incredibly simple to follow. Even for seemingly complex tasks like the texture analysis, the numerous RS specific libraries made any code block more than 3 lines long quite rare. On top of that, using simple raster plots allowed me to play around with different compost images and ratio thresholds to, again, think about how I would display my findings in a certain circumstance.\n\n\n\n\nChen, Bo-Hao, Hsiang-Yin Cheng, Yi-Syuan Tseng, and Jia-Li Yin. 2022. “Two-Pass Bilateral Smooth Filtering for Remote Sensing Imagery.” IEEE Geoscience and Remote Sensing Letters 19: 1–5. https://doi.org/10.1109/LGRS.2020.3048488.\n\n\nSon Le, Mai, Yuei-An Liou, and Minh Tuan Pham. 2023. “Crop Response to Disease and Water Scarcity Quantified by Normalized Difference Latent Heat Index.” IEEE Access 11: 55938–46. https://doi.org/10.1109/ACCESS.2023.3283033.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections and Enhancements</span>"
+    ]
+  },
+  {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "3  Introduction",
+    "title": "4  Introduction",
     "section": "",
     "text": "This is a book created from markdown and executable code.\nSee (knuth84?) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "4  Summary",
+    "title": "5  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Summary</span>"
     ]
   }
 ]

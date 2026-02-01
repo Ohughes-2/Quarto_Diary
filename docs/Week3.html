@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Introduction – Learning Diary</title>
+<title>3&nbsp; Corrections and Enhancements – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,42 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -65,8 +50,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
-<link href="./Week3.html" rel="prev">
+<link href="./intro.html" rel="next">
+<link href="./Week2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -105,6 +90,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -117,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -162,13 +176,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week3.html" class="sidebar-item-text sidebar-link">
+  <a href="./Week3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -183,15 +197,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#content-summary" id="toc-content-summary" class="nav-link active" data-scroll-target="#content-summary"><span class="header-section-number">3.1</span> <strong>Content Summary</strong></a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">3.2</span> Applications</a>
+  <ul class="collapse">
+  <li><a href="#articles" id="toc-articles" class="nav-link" data-scroll-target="#articles"><span class="header-section-number">3.2.1</span> Articles</a></li>
+  <li><a href="#thoughts" id="toc-thoughts" class="nav-link" data-scroll-target="#thoughts"><span class="header-section-number">3.2.2</span> Thoughts</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.3</span> Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></h1>
 </div>
 
 
@@ -208,16 +234,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">(<a href="#ref-knuth84" role="doc-biblioref"><strong>knuth84?</strong></a>)</span> for additional discussion of literate programming.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<section id="content-summary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="content-summary"><span class="header-section-number">3.1</span> <strong>Content Summary</strong></h2>
+<p>The content about corrections for week three comes mostly from the lecture. Four types of image corrections were covered this week: geometric, atmospheric, orthorectification, and radiometric calibration. <strong>Geometric Correction</strong> involves assigning known ground control locations via regression analysis to a remotely sensed image that does not have a geographic reference system. <strong>Atmospheric correction</strong> relates to removing blurring in an image caused by light scattering and absorption, either relatively or absolutely. <strong>Orthorectification</strong> looks to transform an image from the view of a sensor to the view of a map. This involves correcting the value of each pixel by assigning it a nadir view value. <strong>Radiometric Calibration</strong> involves converting digital numbers (specific to each sensor) that measure the brightness of each pixel into spectral radiance values which measure how much light a sensor picks up for each pixel at a certain band or wavelength.</p>
+<p>These corrections are vital to a productive remote sensing project, and because of that, most sources of R.S. data will provide pre-corrected images for download. Despite the importance of these processes that create usable imagery, in practice, image enhancements like ratios and filters are more pertinent to relevant remote sensing outputs. <strong>Ratio enhancements</strong> make use of different spectral signatures across bands to highlight areas of bare soil, healthy vegetation, developed land, etc. <strong>Filter enhancements</strong> allow the smoothing (low pass) or sharpening (high pass) to diminish or enhance variance across pixels.&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Boise.png" class="img-fluid figure-img"></p>
+<figcaption>Boise, Idaho, USA Landsat 8 Image</figcaption>
+</figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Boise_ndvi.png" class="img-fluid figure-img"></p>
+<figcaption>Boise, Idaho, USA NDVI Image</figcaption>
+</figure>
 </div>
+<p>The most important utility of both image corrections and enhancements is the ability to specify a general image into a more objective means of data collection. Despite this, when considering large areas many enhancements like filtering, PCA, and texturing can be computationally intense. Given that this is my third RS based class, I am quite confident in my understanding of corrections and ratio enhancements, but I found that my understanding of corrections in particular was not clear until I participated in the process. Personally calculating DNs to spectral radiance and applying ground control points to an image helped me understand the concepts of nadir, azimuth, TOA reflectance, radiance, etc. In effect I see pre-corrected data as a great disseminator of RS potential, but also as an obstructor of true understanding.</p>
+</section>
+<section id="applications" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
+<section id="articles" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="articles"><span class="header-section-number">3.2.1</span> Articles</h3>
+<p>The articles I wanted to include this week relate to parts of the practical that I spent the most time working on, ratio and filter enhancements. The first paper by <span class="citation" data-cites="son_le_crop_2023">Son Le, Liou, and Pham (<a href="#ref-son_le_crop_2023" role="doc-biblioref">2023</a>)</span> uses Landsat imagery and a fairly complex ratio to analyze surface water presence to analyze both potential water scarcity and disease presence in rice fields in Vietnam. The ratio is called the normalized difference latent heat index (NDLI) and it is obtained from this equation:</p>
+<p><span class="math inline">\(NDLI = [Green - Red]/[Green + Red + SWIR]\)</span></p>
+<p>The utility of this ratio was tested against another common method to assess rice crop health and water supply known as SEBAL or surface energy balance algorithm for land. In brief summary, the NDLI (particularly in conjunction with surface temperature measurements) was able to more clearly detect water, vegetation, soil, and tidal regions than the more common SEBAL method. This led to more accurate and proactive analysis of the health of the rice paddies.</p>
+<p>The second paper by <span class="citation" data-cites="chen_two-pass_2022">Chen et al. (<a href="#ref-chen_two-pass_2022" role="doc-biblioref">2022</a>)</span> uses drone/plane imagery and a bilateral filtering technique to balance smoothing and sharpness in images plagued by noise. The first filter is a standard low pass filter with a large kernel width that smooths edges and reduces the effect of “erratic noise” (page 1). The second filter is also a low pass, but with a much smaller kernel width which takes the now reduced-noise-free image and reshapes the edges that we lost in the first pass.</p>
+<p>The strength of this method is tested against other bilateral filters that only pass one time. In short, the two pass filter produced images that were both free of noise and had sharp edges where pixel variance was high (something missing from the other methods). Notably though, the authors do highlight the increased computation time of the two pass filters.</p>
+</section>
+<section id="thoughts" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="thoughts"><span class="header-section-number">3.2.2</span> Thoughts</h3>
+<p>The main theme that I see in this research is that, although both paper describe a notable improvement in an RS method, they are not trying to reinvent the wheel or completely change our way of thought. <span class="citation" data-cites="son_le_crop_2023">Son Le, Liou, and Pham (<a href="#ref-son_le_crop_2023" role="doc-biblioref">2023</a>)</span> still focus on well known ratio methods, they just find a better one for their situation. equally, <span class="citation" data-cites="chen_two-pass_2022">Chen et al. (<a href="#ref-chen_two-pass_2022" role="doc-biblioref">2022</a>)</span> apply known filtering methods, just with an improvement. Even in the lecture we saw that dark object subtraction was under some scrutiny, not because it’s pointless, but because other methods are better and just as simple to implement.</p>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
+<p>In the previous section, much of the covered topics reflect the more objective utility of remote sensing as a tool for scientific output, and this is incredibly important. However, a part of the lecture and practical that I haven’t touched on yet seems most relevant to this section: the blurring of RS from science into art. From the beginning, the display of an image is key to the understanding of effectively every process covered so far. The goal of corrections is to display the image as true to the materials captured as possible, the point of ratios is to display where certain attributes are most prominent, textures allows us to display certain features with an emphasis on their importance to out use case, and even a simple false color composite changes the understanding of an image by changing the display. To me, it seems that the visual nature of remote sensing makes the processes one decides to use in a project inherently subjective. The overarching goal change from, how <strong>do</strong> I share my findings, to, how <strong>can</strong> I show my findings? With that said, I found that the R studio code for the practical to be incredibly simple to follow. Even for seemingly complex tasks like the texture analysis, the numerous RS specific libraries made any code block more than 3 lines long quite rare. On top of that, using simple raster plots allowed me to play around with different compost images and ratio thresholds to, again, think about how I would display my findings in a certain circumstance.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-chen_two-pass_2022" class="csl-entry" role="listitem">
+Chen, Bo-Hao, Hsiang-Yin Cheng, Yi-Syuan Tseng, and Jia-Li Yin. 2022. <span>“Two-<span>Pass</span> <span>Bilateral</span> <span>Smooth</span> <span>Filtering</span> for <span>Remote</span> <span>Sensing</span> <span>Imagery</span>.”</span> <em>IEEE Geoscience and Remote Sensing Letters</em> 19: 1–5. <a href="https://doi.org/10.1109/LGRS.2020.3048488">https://doi.org/10.1109/LGRS.2020.3048488</a>.
+</div>
+<div id="ref-son_le_crop_2023" class="csl-entry" role="listitem">
+Son Le, Mai, Yuei-An Liou, and Minh Tuan Pham. 2023. <span>“Crop <span>Response</span> to <span>Disease</span> and <span>Water</span> <span>Scarcity</span> <span>Quantified</span> by <span>Normalized</span> <span>Difference</span> <span>Latent</span> <span>Heat</span> <span>Index</span>.”</span> <em>IEEE Access</em> 11: 55938–46. <a href="https://doi.org/10.1109/ACCESS.2023.3283033">https://doi.org/10.1109/ACCESS.2023.3283033</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -621,13 +684,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Week3.html" class="pagination-link" aria-label="Corrections and Enhancements">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span>
+      <a href="./Week2.html" class="pagination-link" aria-label="Introduction to Quarto and Xaringan">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Quarto and Xaringan</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
