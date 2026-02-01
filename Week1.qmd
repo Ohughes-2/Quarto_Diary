@@ -1,5 +1,5 @@
 ---
-title: "Week 1: Introduction to R.S."
+title: "Introduction to R.S."
 ---
 
 ## Summary

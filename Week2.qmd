@@ -1,8 +1,8 @@
 ---
-title: "Week2: Introduction to Quarto and Xaringan"
+title: "Introduction to Quarto and Xaringan"
 ---
 
-# Why so Short This Week?
+## Why so Short This Week?
 
 This week was dedicated to learning how to use quarto books (the very tool I used for you to read this :D) and Xaringan (the tool used for our future group presentation).
 
