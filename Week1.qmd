@@ -2,7 +2,7 @@
 title: "Introduction to R.S."
 ---
 
-## Summary
+## Content Summary
 
 This week’s topic was primarily focussed on the introduction to the background science and techniques associated with remote sensing. This included background information on the electromagnetic spectrum and spectral profiles of distinct materials, numerous technologies that one can use to perform remote sensing (R, Python, SNAP, QGIS, ENVI), and the process of sourcing images with satellites, drones, planes and the potential problems experienced during this process like scattering and cloud cover. 
 
