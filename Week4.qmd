@@ -8,17 +8,17 @@ title: "Policy Applications"
 
 How Can EO data be used to inform on and suggest strategies to increase solar energy use in industrial regions of the county?
 
-**Quick Background:**
+### Quick Background
 
 Loudoun county is the fourth most populous first level locality (city or county) in the State of Virginia with a population of around 440,000 as estimated in 2024 by the [University of Virginia Cooper Center for Public Service](https://www.coopercenter.org/virginia-population-estimates). It makes up part of the hearth of Northern Virginia or NoVA which as a whole forms the south western suburbs of Washington D.C. [@noauthor_virginia_nodate]
 
 ![Northern Virginia, USA, Made with Python Matplotlib](Images/nova_map.png)
 
-**Loudoun County Solar Energy Planning:**
+### Loudoun County Solar Energy Planning:
 
 Loudoun county contains "the largest concentration of data centers in the world." This has strained the local power grid as electricity usage "largely due to data centers" has limited Loudoun's sustainability as the industry forces increased use of fossil fuels for power [@noauthor_energy_nodate, pp. 7, 45]. Combining the immense energy usage of data centers with residential rooftop solar production goals in Loudoun, noted on page 19 of [Loudoun County's 2023 Energy Strategy](https://www.loudoun.gov/DocumentCenter/View/174600/Loudoun-County-Energy-Strategy-Final-Report---2023), could see large industrial buildings form solar farms that would contribute green sourced energy to the local electric grid and decrease reliance on fossil fuels to power the ever demanding data center industry.
 
-**Northern Virginia Solar Energy Planning:**
+### Northern Virginia Solar Energy Planning:
 
 As seen in chapter 1 of this diary, the Virginia side of the Washington D.C metro area has already established increasing solar energy as goal for the wider region, and EO has been used to so. The [Northern Virginia Solar Map](https://www.novasolarmap.com/) estimates potential solar energy production for each building within the data set (@noauthor_home_nodate). However, the current map uses data from 2015 and a recent attempt (that I formed part of) to update the map with 2023 data was cancelled because of federal funding cuts. This means that the current NoVA solar map **cannot** accurately serve as a tool for solar potential estimation or policy support for any building constructed or modified after winter 2015. This further supports other forms of Earth observation to be used for solar potential for Loudoun County's industrial areas.
 
@@ -30,7 +30,7 @@ Using the same principle with Loudoun County data and avoiding expensive high re
 
 ![Data Center Complex, Ashburn, Loudoun County, VA](Images/data_centers.png)
 
-**Dynamic Potential:**
+### Dynamic Potential:
 
 As previously mentioned regarding the NoVA solar map, one of the downsides of high resolution LiDAR is that the projects it serves can often have a short life span for informing policy. Altought he Solar Map still provides useful predictions for a majority of the residents and businesses of Northern Virginia, updating the map is expensive and labor intensive. Creating solar estimates without high resolution LiDAR creates a path for repeatable and temporally dynamic estimates. Because Loudoun's 1ft resolution imagery is updated once per year, a dynamic threshold for solar energy production of all data centers (and other large industrial buildings) could be changed as Loudoun continues to pursue integration of the data center industry.
 
