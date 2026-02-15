@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Introduction – Learning Diary</title>
+<title>4&nbsp; Policy Applications – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,42 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -65,7 +50,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
 <link href="./Week3.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -117,7 +101,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy Applications</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -168,14 +152,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  <a href="./Week4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy Applications</span></span></a>
   </div>
 </li>
     </ul>
@@ -183,15 +161,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#loudoun-county-virginia-usa" id="toc-loudoun-county-virginia-usa" class="nav-link active" data-scroll-target="#loudoun-county-virginia-usa"><span class="header-section-number">4.1</span> Loudoun County, Virginia, USA</a>
+  <ul class="collapse">
+  <li><a href="#solar-energy-planning-goals" id="toc-solar-energy-planning-goals" class="nav-link" data-scroll-target="#solar-energy-planning-goals"><span class="header-section-number">4.1.1</span> Solar Energy Planning Goals:</a></li>
+  </ul></li>
+  <li><a href="#potential-data" id="toc-potential-data" class="nav-link" data-scroll-target="#potential-data"><span class="header-section-number">4.2</span> Potential Data</a></li>
+  <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways"><span class="header-section-number">4.3</span> Take Aways</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.4</span> References</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy Applications</span></h1>
 </div>
 
 
@@ -208,16 +198,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">(<a href="#ref-knuth84" role="doc-biblioref"><strong>knuth84?</strong></a>)</span> for additional discussion of literate programming.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<section id="loudoun-county-virginia-usa" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="loudoun-county-virginia-usa"><span class="header-section-number">4.1</span> Loudoun County, Virginia, USA</h2>
+<section id="solar-energy-planning-goals" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="solar-energy-planning-goals"><span class="header-section-number">4.1.1</span> Solar Energy Planning Goals:</h3>
+<p>How Can EO data be used to inform on and suggest strategies to increase solar energy use in industrial regions of the county?</p>
+<p><strong>Quick Background:</strong></p>
+<p>Loudoun county is the fourth most populous first level locality (city or county) in the State of Virginia with a population of around 440,000 as estimated in 2024 by the <a href="https://www.coopercenter.org/virginia-population-estimates">University of Virginia Cooper Center for Public Service</a>. It makes up part of the hearth of Northern Virginia or NoVA which as a whole forms the south western suburbs of Washington D.C. <span class="citation" data-cites="noauthor_virginia_nodate">(<a href="#ref-noauthor_virginia_nodate" role="doc-biblioref"><span>“Virginia <span>Population</span> <span>Estimates</span> <span></span> <span>Cooper</span> <span>Center</span>”</span> n.d.</a>)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/nova_map.png" class="img-fluid figure-img"></p>
+<figcaption>Northern Virginia, USA, Made with Python Matplotlib</figcaption>
+</figure>
 </div>
+<p><strong>Loudoun County Solar Energy Planning:</strong></p>
+<p>Loudoun county contains “the largest concentration of data centers in the world.” This has strained the local power grid as electricity usage “largely due to data centers” has limited Loudoun’s sustainability as the industry forces increased use of fossil fuels for power <span class="citation" data-cites="noauthor_energy_nodate">(<a href="#ref-noauthor_energy_nodate" role="doc-biblioref"><span>“Energy <span>Management</span> <span></span> <span>Loudoun</span> <span>County</span>, <span>VA</span> - <span>Official</span> <span>Website</span>”</span> n.d., 7, 45</a>)</span>. Combining the immense energy usage of data centers with residential rooftop solar production goals in Loudoun, noted on page 19 of <a href="https://www.loudoun.gov/DocumentCenter/View/174600/Loudoun-County-Energy-Strategy-Final-Report---2023">Loudoun County’s 2023 Energy Strategy</a>, could see large industrial buildings form solar farms that would contribute green sourced energy to the local electric grid and decrease reliance on fossil fuels to power the ever demanding data center industry.</p>
+<p><strong>Northern Virginia Solar Energy Planning:</strong></p>
+<p>As seen in chapter 1 of this diary, the Virginia side of the Washington D.C metro area has already established increasing solar energy as goal for the wider region, and EO has been used to so. The <a href="https://www.novasolarmap.com/">Northern Virginia Solar Map</a> estimates potential solar energy production for each building within the data set (<span class="citation" data-cites="noauthor_home_nodate"><span>“<span>HOME</span> <span></span> Novasolarmap”</span> (<a href="#ref-noauthor_home_nodate" role="doc-biblioref">n.d.</a>)</span>). However, the current map uses data from 2015 and a recent attempt (that I formed part of) to update the map with 2023 data was cancelled because of federal funding cuts. This means that the current NoVA solar map <strong>cannot</strong> accurately serve as a tool for solar potential estimation or policy support for any building constructed or modified after winter 2015. This further supports other forms of Earth observation to be used for solar potential for Loudoun County’s industrial areas.</p>
+</section>
+</section>
+<section id="potential-data" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="potential-data"><span class="header-section-number">4.2</span> Potential Data</h2>
+<p>Unlike the NoVA Solar Map which used privately collected LiDAR data and ArcGIS tools as its primary method of solar potential calculation, this policy looks to open source data collected by Loudoun County as well as R-studio or Python for calculation. This would allow for all steps to be repeated by any locality in the world assuming they had equivalent data. With that, much of the analysis required for assessing solar potential come from a 2015 paper by Horvath et al.&nbsp;in which aerial imagery is used to assess the area of a building, roof shape, and potential obstructions in order to create a usable area coefficient for already known solar potential calculations. <span class="citation" data-cites="horvath_solar_2016">(<a href="#ref-horvath_solar_2016" role="doc-biblioref">Horváth, Kassai-Szoó, and Csoknyai 2016</a>)</span></p>
+<p>Using the same principle with Loudoun County data and avoiding expensive high resolution LiDAR, a typology for data centers in Loudoun can be created. This would benefit from most data centers following a similar architectural design. Additionally and most importantly, the “Loudoun Imagery 2025” data from the <a href="https://geohub-loudoungis.opendata.arcgis.com/search?q=imagery&amp;sort=Title%7Ctitle%7Casc">Loudoun County GeoHub</a> provides 1 foot (0.3048 meters) resolution which would allow the base typology to assess roof angle and building height while variables like shadow blockage, roof installments (e.g HVAC units), and building area to vary in the usable area coefficient of the solar potential formula.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/data_centers.png" class="img-fluid figure-img"></p>
+<figcaption>Data Center Complex, Ashburn, Loudoun County, VA</figcaption>
+</figure>
 </div>
+<p><strong>Dynamic Potential:</strong></p>
+<p>As previously mentioned regarding the NoVA solar map, one of the downsides of high resolution LiDAR is that the projects it serves can often have a short life span for informing policy. Altought he Solar Map still provides useful predictions for a majority of the residents and businesses of Northern Virginia, updating the map is expensive and labor intensive. Creating solar estimates without high resolution LiDAR creates a path for repeatable and temporally dynamic estimates. Because Loudoun’s 1ft resolution imagery is updated once per year, a dynamic threshold for solar energy production of all data centers (and other large industrial buildings) could be changed as Loudoun continues to pursue integration of the data center industry.</p>
+</section>
+<section id="take-aways" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="take-aways"><span class="header-section-number">4.3</span> Take Aways</h2>
+<p>Given my experience as both a recent former resident of Northern Virginia and a member of the team attempting to update the NoVA solar map, I am already familiar with the numerous statewide and NoVA regional incentives to introduce solar energy more into individual buildings and the wider power grid. However, my understanding of data centers, particularly in Loudoun County, was tailored by typically disgruntled Loudoun residents and politicians expressing their disgust with the rapid growth of the industry since around 2010. This combined with the growth of the data center industry in other parts of Virginia, most notably the Richmond area around 160 km south, led me to assume that Loudoun had nearly capped it’s introduction of data centers. However, the <a href="https://www.loudoun.gov/DocumentCenter/View/174600/Loudoun-County-Energy-Strategy-Final-Report---2023">Loudoun County’s 2023 Energy Strategy</a> confirms the exact opposite, and reiterates the need for supplementation to the power grid. Specifically, in 2022, Loudoun estimated that by 2030 there would be a 12 million square foot (roughly 1.1 million square meter) increase in data center floor space. Additionally the Energy Strategy mentions “no specific strategies to reduce energy consumption of data centers” which further supports the idea of combining the already existing plans for increasing residential solar energy with the continued growth of data centers. <span class="citation" data-cites="noauthor_energy_nodate">(<a href="#ref-noauthor_energy_nodate" role="doc-biblioref"><span>“Energy <span>Management</span> <span></span> <span>Loudoun</span> <span>County</span>, <span>VA</span> - <span>Official</span> <span>Website</span>”</span> n.d., 15, 40</a>)</span></p>
+<p>Lastly, my perception of how solar energy is calculates using Earth Observation data was obscured by the use of ArcGIS in the NoVA Solar Map. In that project, all I knew is that LiDAR was used to create a DEM and then the ESRI solar estimation tool would spit out a layer of solar estimation. I now understand, after reading the Horvath et al.&nbsp;paper, that as long a the usable area is attained a standard formula can be applied. This is why I decided to focus on open source high spatial resolution as the formula could be applied to any data center complex with adequate imagery.</p>
+</section>
+<section id="references" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="references"><span class="header-section-number">4.4</span> References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-noauthor_energy_nodate" class="csl-entry" role="listitem">
+<span>“Energy <span>Management</span> <span></span> <span>Loudoun</span> <span>County</span>, <span>VA</span> - <span>Official</span> <span>Website</span>.”</span> n.d. Accessed February 15, 2026. <a href="https://www.loudoun.gov/energy">https://www.loudoun.gov/energy</a>.
+</div>
+<div id="ref-noauthor_home_nodate" class="csl-entry" role="listitem">
+<span>“<span>HOME</span> <span></span> Novasolarmap.”</span> n.d. Accessed January 23, 2026. <a href="https://www.novasolarmap.com/">https://www.novasolarmap.com/</a>.
+</div>
+<div id="ref-horvath_solar_2016" class="csl-entry" role="listitem">
+Horváth, Miklós, Dominika Kassai-Szoó, and Tamás Csoknyai. 2016. <span>“Solar Energy Potential of Roofs on Urban Level Based on Building Typology.”</span> <em>Energy and Buildings</em> 111 (January): 278–89. <a href="https://doi.org/10.1016/j.enbuild.2015.11.031">https://doi.org/10.1016/j.enbuild.2015.11.031</a>.
+</div>
+<div id="ref-noauthor_virginia_nodate" class="csl-entry" role="listitem">
+<span>“Virginia <span>Population</span> <span>Estimates</span> <span></span> <span>Cooper</span> <span>Center</span>.”</span> n.d. Accessed February 15, 2026. <a href="https://www.coopercenter.org/virginia-population-estimates">https://www.coopercenter.org/virginia-population-estimates</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -626,9 +662,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
