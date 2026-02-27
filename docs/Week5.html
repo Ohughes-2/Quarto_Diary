@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Introduction to Quarto and Xaringan – Learning Diary</title>
+<title>5&nbsp; Google Earth Engine – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Week3.html" rel="next">
-<link href="./Week1.html" rel="prev">
+<link href="./Week6.html" rel="next">
+<link href="./Week4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -69,8 +89,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/fitvids-2.1.1/fitvids.min.js"></script>
-
 
 
 </head>
@@ -84,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Quarto and Xaringan</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -123,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Week2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Quarto and Xaringan</span></span></a>
   </div>
 </li>
@@ -141,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week5.html" class="sidebar-item-text sidebar-link">
+  <a href="./Week5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
@@ -161,10 +179,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#why-so-short-this-week" id="toc-why-so-short-this-week" class="nav-link active" data-scroll-target="#why-so-short-this-week"><span class="header-section-number">2.1</span> Why so Short This Week?</a>
+  <li><a href="#introduction-to-our-new-rs-interface-gee-javascript" id="toc-introduction-to-our-new-rs-interface-gee-javascript" class="nav-link active" data-scroll-target="#introduction-to-our-new-rs-interface-gee-javascript"><span class="header-section-number">5.1</span> Introduction to our new RS Interface (GEE &amp; Javascript)</a>
   <ul class="collapse">
-  <li><a href="#xaringan-presentation" id="toc-xaringan-presentation" class="nav-link" data-scroll-target="#xaringan-presentation"><span class="header-section-number">2.1.1</span> Xaringan Presentation</a></li>
+  <li><a href="#whats-new" id="toc-whats-new" class="nav-link" data-scroll-target="#whats-new"><span class="header-section-number">5.1.1</span> What’s New</a></li>
+  <li><a href="#utility" id="toc-utility" class="nav-link" data-scroll-target="#utility"><span class="header-section-number">5.1.2</span> Utility</a></li>
+  <li><a href="#any-problems" id="toc-any-problems" class="nav-link" data-scroll-target="#any-problems"><span class="header-section-number">5.1.3</span> Any Problems?</a></li>
   </ul></li>
+  <li><a href="#research-capabilities" id="toc-research-capabilities" class="nav-link" data-scroll-target="#research-capabilities"><span class="header-section-number">5.2</span> Research Capabilities</a>
+  <ul class="collapse">
+  <li><a href="#random-forest-classification" id="toc-random-forest-classification" class="nav-link" data-scroll-target="#random-forest-classification"><span class="header-section-number">5.2.1</span> <strong>Random Forest Classification</strong></a></li>
+  </ul></li>
+  <li><a href="#thoughts" id="toc-thoughts" class="nav-link" data-scroll-target="#thoughts"><span class="header-section-number">5.3</span> Thoughts</a>
+  <ul class="collapse">
+  <li><a href="#if-you-cant-tell-im-a-bit-skeptical." id="toc-if-you-cant-tell-im-a-bit-skeptical." class="nav-link" data-scroll-target="#if-you-cant-tell-im-a-bit-skeptical."><span class="header-section-number">5.3.1</span> If you can’t tell… I’m a bit Skeptical.</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">5.4</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -173,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Quarto and Xaringan</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></h1>
 </div>
 
 
@@ -190,23 +219,73 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="why-so-short-this-week" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="why-so-short-this-week"><span class="header-section-number">2.1</span> Why so Short This Week?</h2>
-<p>This week was dedicated to learning how to use quarto books (the very tool I used for you to read this :D) and Xaringan (the tool used for our future group presentation).</p>
-<p>The summary, applications, and reflection this week are held within a xaringan presentation and relate to a specific satellite of my choosing. <strong>Spoiler Alert</strong>: I chose the GEDI LiDAR sensor on the ISS. In any case, I suppose I should stop stalling and let you see the presentation.</p>
-<section id="xaringan-presentation" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="xaringan-presentation"><span class="header-section-number">2.1.1</span> Xaringan Presentation</h3>
-<div class="cell">
-<div class="cell-output-display">
-<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
-<iframe src="https://ohughes-2.github.io/Xaringan_Example/" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen=""></iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
+<section id="introduction-to-our-new-rs-interface-gee-javascript" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="introduction-to-our-new-rs-interface-gee-javascript"><span class="header-section-number">5.1</span> Introduction to our new RS Interface (GEE &amp; Javascript)</h2>
+<p>This week’s summary will contain more code than previous chapters in reference to what was learned this week.</p>
+<section id="whats-new" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="whats-new"><span class="header-section-number">5.1.1</span> What’s New</h3>
+<p>The most significant change from using R studio, ENVI, or SNAP to Google Earth Engine (GEE) is the relationship between the client side and server side of the application. Gone is the requirement to download imagery into my files and upload into an application as GEE holds servers with virtually endless imagery possibility that can be identified and called via client side javascript functions.</p>
+<p>As an example this code from the practical searches for a Landsat 8 held within GEE’s servers from June 1, 2021 - October 10, 2022 that intersects with the boundary of Delhi, India with a cloud cover of 10% or less. Then it is added to the map window using bands red:4, green:3, and blue:2 (true color). This process makes identifying and accessing remotely sensed data much easier, and in some ways similar to the process of a Google search.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/GEE1.png" class="img-fluid figure-img"></p>
+<figcaption>GEE Image Location</figcaption>
+</figure>
 </div>
-</div>
-</div>
-
-
 </section>
+<section id="utility" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="utility"><span class="header-section-number">5.1.2</span> Utility</h3>
+<p>Importantly, the practical demonstrated that GEE is capable of completing every task that we have covered previously. Specifically, I felt that the texturing corrections were equally simple to R studio, though PCA seemed much more complicated to run than R studio. Nonetheless, the outputs for both were the same and GEE can handle PCA for much larger areas.</p>
+<p>The following code shows the PCA code run in GEE. The code from corrections week in R is much shorter and took noticeably less time to run.</p>
+<p><img src="Images/GEE2.png" class="img-fluid"><img src="Images/GEE3.png" class="img-fluid"><img src="Images/GEE4.png" class="img-fluid"></p>
+</section>
+<section id="any-problems" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="any-problems"><span class="header-section-number">5.1.3</span> Any Problems?</h3>
+<p>Despite the clear benefits of processing time, accessible data, user accessibility, I am concerned by a few traits of Google Earth Engine. Laborious tasks still require time to fully process and load, like the PCA above, and I simply don’t have enough experience with GEE to be confident enough in its abilities to speed up a dissertation sized project for example. Additionally, the caveat of Google adding limits to large processing functions further suggests to me the GEE is not a sustainable application to use in a realtively small self guided project without a budget, like a masters thesis.</p>
+</section>
+</section>
+<section id="research-capabilities" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="research-capabilities"><span class="header-section-number">5.2</span> Research Capabilities</h2>
+<section id="random-forest-classification" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="random-forest-classification"><span class="header-section-number">5.2.1</span> <strong>Random Forest Classification</strong></h3>
+<p>These papers are not only interesting to me as they pertain to the identification and influence of urban areas, but they also share concepts with our Data Science for Spatial Systems class. In their paper from 2015 (<span class="citation" data-cites="zhang_development_2020">Zhang et al. (<a href="#ref-zhang_development_2020" role="doc-biblioref">2020</a>)</span>) they develop a random forest machine learning tool to classify the entire world into either impervious or non-impervious areas using GEE engine as the source of training data. In short, (<span class="citation" data-cites="zhang_development_2020">Zhang et al. (<a href="#ref-zhang_development_2020" role="doc-biblioref">2020</a>)</span>) creates global layers of 37 data points including Landsat surface reflectance, MODIS environmental data, DEM elevation and slope data, etc. This data was then split into a 5° x 5° grid with pixels at 30m spatial resolution. Lastly the random forest classifier was trained and tested in each grid cell individually and a single global binary mosaic output was created at a 95% accuracy.</p>
+<p>In contrast to Zhang et al., (<span class="citation" data-cites="campos-taberner_global_2018">Campos-Taberner et al. (<a href="#ref-campos-taberner_global_2018" role="doc-biblioref">2018</a>)</span>) looked to create a global machine learning tool to estimate vegetation qualities and health, specifically: leaf area index, photosynthetic radiation, vegetation cover, and canopy water content. Additionally, their model was trained outside of GEE, but applied with GEE once a global set of MODIS images was attained. In the end, the RF model was able to associate the MODIS attribute data with known PROSAIL (used to train the model) vegetation measures (the variables above) and predict said attributes globally. This resulted in 4 global maps at 500m resolution displaying the four above variables. The leaf area and Photosynthesis map displayed an R2 of 87% and 92% respectively.</p>
+<p>To me, the primary methodological takeaway about GEE from these two papers is that GEE provides a more robust combination of tools than either a SNAP/ENVI application and R studio or Python. However, I must note that both studies were at a global scale. It is easy to conceptualize that GEE can outperform R at this scale, but I ask, what if these projects looked at just London or the Yorkshire Dales? Does GEE still provide a notable upgrade? Aside from this, I think the introduction of machine learning in these papers displays that on a theoretical level, there is nothing that one can’t do in GEE that one can do in R. With my current knowledge of GEE this tells me that the decision to use GEE is purely one of processing power.</p>
+</section>
+</section>
+<section id="thoughts" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="thoughts"><span class="header-section-number">5.3</span> Thoughts</h2>
+<section id="if-you-cant-tell-im-a-bit-skeptical." class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="if-you-cant-tell-im-a-bit-skeptical."><span class="header-section-number">5.3.1</span> If you can’t tell… I’m a bit Skeptical.</h3>
+<p>To be clear, there is much about GEE that I found impressive this week. Certainly the concept of global processing and model training/testing displayed in the papers is exciting. However, I feel that I both overestimated the changes that the client/server system could make to my own current studies and lack sufficient knowledge of GEE methods to be aware of more significant benefits. In chapter 1, I expressed excitement in that I thought GEE could act as a middle ground between SNAP/ENVI and R studio, but after this week I don’t think this is the correct verbiage. I think GEE provides an incredibly robust tool for the integration of multidisciplinary methods into RS but with a highlighted, underlined, italicized, bold caveat of ==<u><strong><em>scale</em></strong></u>==.</p>
+<p>Because of this, I have asked myself a few questions this week regarding my potential use of GEE:</p>
+<p><strong>Do I think GEE will be useful for my dissertation?</strong></p>
+<ul>
+<li>Probably Not</li>
+</ul>
+<p><strong>Do I think GEE will be useful for the presentation for this class?</strong></p>
+<ul>
+<li>Probably Not</li>
+</ul>
+<p><strong>Could I have used GEE for any previous RS projects I did in undergrad?</strong></p>
+<ul>
+<li>Yes, but I don’t think there would have been an improvement</li>
+</ul>
+<p>Despite the generally bleak nature of these responses, this reflects more about me than GEE. The simple fact is that I don’t see myself participating in a global or other large scale project in the neat future. However, we’ll see in the coming weeks if my attitude shifts with more practice with GEE and its methods.</p>
+</section>
+</section>
+<section id="references" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="references"><span class="header-section-number">5.4</span> References</h2>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-campos-taberner_global_2018" class="csl-entry" role="listitem">
+Campos-Taberner, Manuel, Álvaro Moreno-Martínez, Francisco Javier García-Haro, Gustau Camps-Valls, Nathaniel P. Robinson, Jens Kattge, and Steven W. Running. 2018. <span>“Global <span>Estimation</span> of <span>Biophysical</span> <span>Variables</span> from <span>Google</span> <span>Earth</span> <span>Engine</span> <span>Platform</span>.”</span> <em>Remote Sensing</em> 10 (8): 1167. <a href="https://doi.org/10.3390/rs10081167">https://doi.org/10.3390/rs10081167</a>.
+</div>
+<div id="ref-zhang_development_2020" class="csl-entry" role="listitem">
+Zhang, Xiao, Liangyun Liu, Changshan Wu, Xidong Chen, Yuan Gao, Shuai Xie, and Bing Zhang. 2020. <span>“Development of a Global 30 m Impervious Surface Map Using Multisource and Multitemporal Remote Sensing Datasets with the <span>Google</span> <span>Earth</span> <span>Engine</span> Platform.”</span> <em>Earth System Science Data</em> 12 (3): 1625–48. <a href="https://doi.org/10.5194/essd-12-1625-2020">https://doi.org/10.5194/essd-12-1625-2020</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -611,13 +690,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Week1.html" class="pagination-link" aria-label="Introduction to R.S.">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R.S.</span></span>
+      <a href="./Week4.html" class="pagination-link" aria-label="Policy Applications">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy Applications</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Week3.html" class="pagination-link" aria-label="Corrections and Enhancements">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Week6.html" class="pagination-link" aria-label="Week6">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week6</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
