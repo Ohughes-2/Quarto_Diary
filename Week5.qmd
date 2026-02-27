@@ -1,18 +1,163 @@
 ---
-title: "Week5"
+title: "Google Earth Engine"
 ---
 
-## Google Earth Engine
+## Introduction to our new RS Interface (GEE & Javascript)
 
-### Introduction to our new RS Interface
+This week's summary will contain more code than previous chapters in reference to what was learned this week.
 
-This week's summary will contain more code and images that before in reference to what was learned this week.
+### What's New
 
-**What's New**
+The most significant change from using R studio, ENVI, or SNAP to Google Earth Engine (GEE) is the relationship between the client side and server side of the application. Gone is the requirement to download imagery into my files and upload into an application as GEE holds servers with virtually endless imagery possibility that can be identified and called via client side javascript functions.
 
-The most significant change from using R studio, ENVI, or SNAP to Google Earth Engine (GEE) is the relationship between the client side and server side of the application. Gone are the days of downloading imagery into my files and uploading into an application as GEE holds servers with virtually endless imagery possibility that can be identified and called via client side javascript functions.
+As an example this code from the practical searches for a Landsat 8 held within GEE's servers from June 1, 2021 - October 10, 2022 that intersects with the boundary of Delhi, India with a cloud cover of 10% or less. Then it is added to the map window using bands red:4, green:3, and blue:2 (true color). This process makes identifying and accessing remotely sensed data much easier, and in some ways similar to the process of a Google search.
 
-As an example...
+```{js}
+var oneimage_study_area_cloud = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
+  .filterDate('2021-06-01', '2022-10-10')
+  .filterBounds(Delhi)  // Intersecting ROI
+  .filter(ee.Filter.lt("CLOUD_COVER", 0.1));
+Map.addLayer(oneimage_study_area_cloud, {bands: ["SR_B4", "SR_B3", "SR_B2"]}, "oneimage_study_area_cloud")
+```
+
+### Utility
+
+Importantly, the practical demonstrated that GEE is capable of completing every task that we have covered previously. Specifically, I felt that the texturing corrections were equally simple to R studio, though PCA seemed much more complicated to run than R studio. Nonetheless, the outputs for both were the same and GEE can handle PCA for much larger areas.
+
+The following code shows the PCA code run in GEE. The code from corrections week in R is much shorter and took noticeably less time to run.
+
+```{js}
+// Principle Component Analysis
+// scale and band names
+var scale = 30;
+var bandNames = glcm.bandNames();
+
+var region = Delhi.geometry();
+Map.centerObject(region, 10);
+Map.addLayer(ee.Image().paint(region, 0, 2), {}, 'Region');
+
+print(region, "Delhi_geometry")
 
 
+// mean center the data and SD strech the princapal components 
+// and an SD stretch of the principal components.
+var meanDict = glcm.reduceRegion({
+    reducer: ee.Reducer.mean(),
+    geometry: region,
+    scale: scale,
+    maxPixels: 1e9
+});
+var means = ee.Image.constant(meanDict.values(bandNames));
+var centered = glcm.subtract(means);
 
+// This helper function returns a list of new band names.
+var getNewBandNames = function(prefix) {
+  var seq = ee.List.sequence(1, bandNames.length());
+  return seq.map(function(b) {
+    return ee.String(prefix).cat(ee.Number(b).int());
+  });
+};
+
+// This function accepts mean centered imagery, a scale and
+// a region in which to perform the analysis.  It returns the
+// Principal Components (PC) in the region as a new image.
+var getPrincipalComponents = function(centered, scale, region) {
+  // Collapse the bands of the image into a 1D array per pixel.
+  var arrays = centered.toArray();
+
+  // Compute the covariance of the bands within the region.
+  var covar = arrays.reduceRegion({
+    reducer: ee.Reducer.centeredCovariance(),
+    geometry: region,
+    scale: scale,
+    maxPixels: 1e9
+  });
+
+  // Get the 'array' covariance result and cast to an array.
+  // This represents the band-to-band covariance within the region.
+  var covarArray = ee.Array(covar.get('array'));
+
+  // Perform an eigen analysis and slice apart the values and vectors.
+  var eigens = covarArray.eigen();
+
+  // This is a P-length vector of Eigenvalues.
+  var eigenValues = eigens.slice(1, 0, 1);
+  // This is a PxP matrix with eigenvectors in rows.
+  
+  var eigenValuesList = eigenValues.toList().flatten()
+  var total = eigenValuesList.reduce(ee.Reducer.sum())
+  var percentageVariance = eigenValuesList.map(function(item) {
+  return (ee.Number(item).divide(total)).multiply(100).format('%.2f')
+    })
+  
+  print("percentageVariance", percentageVariance)  
+
+  var eigenVectors = eigens.slice(1, 1);
+
+  // Convert the array image to 2D arrays for matrix computations.
+  var arrayImage = arrays.toArray(1);
+
+  // Left multiply the image array by the matrix of eigenvectors.
+  var principalComponents = ee.Image(eigenVectors).matrixMultiply(arrayImage);
+
+  // Turn the square roots of the Eigenvalues into a P-band image.
+  var sdImage = ee.Image(eigenValues.sqrt())
+    .arrayProject([0]).arrayFlatten([getNewBandNames('sd')]);
+
+  // Turn the PCs into a P-band image, normalized by SD.
+  return principalComponents
+    // Throw out an an unneeded dimension, [[]] -> [].
+    .arrayProject([0])
+    // Make the one band array image a multi-band image, [] -> image.
+    .arrayFlatten([getNewBandNames('pc')])
+    // Normalize the PCs by their SDs.
+    .divide(sdImage);
+};
+
+// Get the PCs at the specified scale and in the specified region
+var pcImage = getPrincipalComponents(centered, scale, region);
+
+// Plot each PC as a new layer
+for (var i = 0; i < bandNames.length().getInfo(); i++) {
+  var band = pcImage.bandNames().get(i).getInfo();
+  Map.addLayer(pcImage.select([band]), {min: -2, max: 2}, band);
+
+```
+
+### Any Problems?
+
+Despite the clear benefits of processing time, accessible data, user accessibility, I am concerned by a few traits of Google Earth Engine. Laborious tasks still require time to fully process and load, like the PCA above, and I simply don't have enough experience with GEE to be confident enough in its abilities to speed up a dissertation sized project for example. Additionally, the caveat of Google adding limits to large processing functions further suggests to me the GEE is not a sustainable application to use in a realtively small self guided project without a budget, like a masters thesis.
+
+## Research Capabilities
+
+### **Random Forest Classification**
+
+These papers are not only interesting to me as they pertain to the identification and influence of urban areas, but they also share concepts with our Data Science for Spatial Systems class. In their paper from 2015 (@zhang_development_2020) they develop a random forest machine learning tool to classify the entire world into either impervious or non-impervious areas using GEE engine as the source of training data. In short, (@zhang_development_2020) creates global layers of 37 data points including Landsat surface reflectance, MODIS environmental data, DEM elevation and slope data, etc. This data was then split into a 5° x 5° grid with pixels at 30m spatial resolution. Lastly the random forest classifier was trained and tested in each grid cell individually and a single global binary mosaic output was created at a 95% accuracy.
+
+In contrast to Zhang et al., (@campos-taberner_global_2018) looked to create a global machine learning tool to estimate vegetation qualities and health, specifically: leaf area index, photosynthetic radiation, vegetation cover, and canopy water content. Additionally, their model was trained outside of GEE, but applied with GEE once a global set of MODIS images was attained. In the end, the RF model was able to associate the MODIS attribute data with known PROSAIL (used to train the model) vegetation measures (the variables above) and predict said attributes globally. This resulted in 4 global maps at 500m resolution displaying the four above variables. The leaf area and Photosynthesis map displayed an R2 of 87% and 92% respectively.
+
+To me, the primary methodological takeaway about GEE from these two papers is that GEE provides a more robust combination of tools than either a SNAP/ENVI application and R studio or Python. However, I must note that both studies were at a global scale. It is easy to conceptualize that GEE can outperform R at this scale, but I ask, what if these projects looked at just London or the Yorkshire Dales? Does GEE still provide a notable upgrade? Aside from this, I think the introduction of machine learning in these papers displays that on a theoretical level, there is nothing that one can't do in GEE that one can do in R. With my current knowledge of GEE this tells me that the decision to use GEE is purely one of processing power.
+
+## Thoughts
+
+### If you can't tell... I'm a bit Skeptical.
+
+To be clear, there is much about GEE that I found impressive this week. Certainly the concept of global processing and model training/testing displayed in the papers is exciting. However, I feel that I both overestimated the changes that the client/server system could make to my own current studies and lack sufficient knowledge of GEE methods to be aware of more significant benefits. In chapter 1, I expressed excitement in that I thought GEE could act as a middle ground between SNAP/ENVI and R studio, but after this week I don't think this is the correct verbiage. I think GEE provides an incredibly robust tool for the integration of multidisciplinary methods into RS but with a highlighted, underlined, italicized, bold caveat of ==<u>***scale***</u>==.
+
+Because of this, I have asked myself a few questions this week regarding my potential use of GEE:
+
+**Do I think GEE will be useful for my dissertation?**
+
+-   Probably Not
+
+**Do I think GEE will be useful for the presentation for this class?**
+
+-   Probably Not
+
+**Could I have used GEE for any previous RS projects I did in undergrad?**
+
+-   Yes, but I don't think there would have been an improvement
+
+Despite the generally bleak nature of these responses, this reflects more about me than GEE. The simple fact is that I don't see myself participating in a global or other large scale project in the neat future. However, we'll see in the coming weeks if my attitude shifts with more practice with GEE and its methods.
+
+## References
