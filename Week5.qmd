@@ -1,0 +1,18 @@
+---
+title: "Week5"
+---
+
+## Google Earth Engine
+
+### Introduction to our new RS Interface
+
+This week's summary will contain more code and images that before in reference to what was learned this week.
+
+**What's New**
+
+The most significant change from using R studio, ENVI, or SNAP to Google Earth Engine (GEE) is the relationship between the client side and server side of the application. Gone are the days of downloading imagery into my files and uploading into an application as GEE holds servers with virtually endless imagery possibility that can be identified and called via client side javascript functions.
+
+As an example...
+
+
+
