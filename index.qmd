@@ -4,26 +4,26 @@ This diary explores my thoughts about each method we cover in class. This is my 
 
 Additionally, I was part of a team from January-June 2025 that was using LiDAR data (DEM) to assess solar energy potential of rooftops in Northern Virginia, USA. I draw on these experiences in this diary as a source of questions and background for both the methods covered and literature analysis.
 
-Chapter 1:
-
--   [Introduction to Remote Sensing](1  Introduction to R.S. – Learning Diary)
-
 Chapter 2:
 
--   [Quarto Books and Xaringan Presentations](2  Introduction to Quarto and Xaringan – Learning Diary)
+-   [Introduction to Remote Sensing](1%20Introduction%20to%20R.S.%20–%20Learning%20Diary)
 
-Chapter 3
+Chapter 3:
 
--   [Corrections and Enhancements](3  Corrections and Enhancements – Learning Diary)
+-   [Quarto Books and Xaringan Presentations](2%20Introduction%20to%20Quarto%20and%20Xaringan%20–%20Learning%20Diary)
 
-Chapter 4
+Chapter 4:
 
--   [Project Case Study: Solar Energy in Loudoun County, Virginia](4  Policy Applications – Learning Diary)
+-   [Corrections and Enhancements](3%20Corrections%20and%20Enhancements%20–%20Learning%20Diary)
 
-Chapter 5
+Chapter 5:
 
--   [Introduction to Google Earth Engine](5  Google Earth Engine – Learning Diary)
+-   [Project Case Study: Solar Energy in Loudoun County, Virginia](4%20Policy%20Applications%20–%20Learning%20Diary)
 
-Chapter 6
+Chapter 6:
 
--   [Remote Sensing and Machine Learning](6  Week6 – Learning Diary)
+-   [Introduction to Google Earth Engine](5%20Google%20Earth%20Engine%20–%20Learning%20Diary)
+
+Chapter 7:
+
+-   [Remote Sensing and Machine Learning](6%20Week6%20–%20Learning%20Diary)

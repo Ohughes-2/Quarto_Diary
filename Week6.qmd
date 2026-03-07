@@ -103,6 +103,24 @@ print('Validation consumer accuracy: ', consumers);
 
 ## More ML Applications in GEE
 
-Without having looked at the topic for this week, I discussed 2 papers last week that used machine learning in GEE as a segue to help me understand more complex methods possible in GEE. Both of them (@zhang_development_2020) created a global impervious area classifier and (@campos-taberner_global_2018) created a vegetation health classifier. This week, I wanted to look into another feature of Remote Sensing that I have worked with before, the time series.
+Without having looked at the topic for this week, I discussed 2 papers last week that used machine learning in GEE as a segue to help me understand more complex methods possible in GEE. This week, I wanted to look into another feature of Remote Sensing that I have worked with before, the time series.
 
-First, (@zhang_development_2020 s
+### Double Time Series
+
+First, (@gao_using_2024) use two separate times series together to measure the erosion dynamics of the extremely fertile black soil region of Northeastern China. Specifically, they use Differential Interferometric Synthetic Aperture Radar (D-InSAR) from 2016-2021 and Small Baseline Subset Interferometric Synthetic Aperture Radar (SBAS-InSAR) from 2017 to create erosion training data for classification of erosion severity. The first time series provides a general change in soil presence while the second time series helps delineate seasonal changes. The model was able to predict erosion patterns to the millimeter and describe regions on mountain sides, near running water, and with sparse vegetation as more susceptible to erosion.
+
+### Vegetation & Temperature
+
+Second, (@aka_toward_2023) use a single time series from 2015-2022 to assess the changes in vegetation and land surface temperature given the introduction of cashew plantations into areas of typically rotation agriculture. They use Sentinel 2 images to classify each image in their collection into either annual crops, perennial crops, bare land, Savannah, or water. Then, Landsat 8 data is used to assess the NDVI and LST of each image to quantify the vegetation and temperature across time. The classification finished with an accuracy of roughly 96% and it shows that temperature increased the most in areas where the perennial cashew plantations replaced bare earth areas.
+
+### So?
+
+These two ML experiments display the utility of temporal changes in classification. Specifically,(@gao_using_2024) displays a combination of a long and short term time series which allows them to highlight both larger patterns of change, and local seasonal changes. However, they fail to describe the accuracy of their model in the same way as (@aka_toward_2023). Simply explaining that the ML model was accurate to a certain range of millimeters could potentially be misleading when the image source is of extremely high spatial resolution. Lastly, one important take I want to highlight is that both of these studies used images available for use within the GEE servers meaning that all of the analysis is by default open source, assuming that one has access to GEE.
+
+## Another Task on the Horizon
+
+Despite the generally positive interactions with both GEE and ML as a concept this week, I can't help but focus on the group presentation assignment coming up. This week was incredibly important for our group as we narrowed down our topic to assessing the growth of informal settlements in floodplains in Manaus, Brazil. Because of this, much of my focus has been on how I/my group could include classification with ML into are project, or if it's necessary. Can ML be used to identify flood threatened areas, informal settlements v. formal developments, or loss of vegetation? Can we use a time series to assess the growth of these communities across time in multiple parts of the city? Even though the project involves coming up with a plan rather than an entire RS analysis, creating a robust potential plan is of high importance to us, and I think classification could be helpful.
+
+Aside from the connections to our project, last week I was quite critical of the utility of GEE considering I currently don't need large scale processing, the introduction of javascript, etc. But as mentioned in the introduction above, this week was certainly a step up. Given that I recognized my past experience with ML in ENVI, more conceptual practical than some of the code written last week, and the papers using data from the GEE servers, I feel like more of GEE's utility is starting to shine in my mind. Despite this, I still think that I prefer R or Python for my own necessities. I think I could have run a supervised learning classification of Ada County, Idaho just as easily with similar accuracy in R or Python. Connection back to the presentation, we're focusing on open data, and maybe that means focusing on R as an open source tool that won't introduce computation limits in the near future.
+
+## References
