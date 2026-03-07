@@ -20,7 +20,7 @@ Importantly, the practical demonstrated that GEE is capable of completing every 
 
 The following code shows the PCA code run in GEE. The code from corrections week in R is much shorter and took noticeably less time to run.
 
-![](Images/GEE2.png)![](Images/GEE3.png)![](Images/GEE4.png)
+![](Images/GEE2.png)![](Images/GEE3.png)![The point of this is to show much code it took to operate and individually plot the PCA layers. Despite this, the code is clear and understandable without much experience with Javascript](Images/GEE4.png)
 
 ### Any Problems?
 
@@ -40,7 +40,7 @@ To me, the primary methodological takeaway about GEE from these two papers is th
 
 ### If you can't tell... I'm a bit Skeptical.
 
-To be clear, there is much about GEE that I found impressive this week. Certainly the concept of global processing and model training/testing displayed in the papers is exciting. However, I feel that I both overestimated the changes that the client/server system could make to my own current studies and lack sufficient knowledge of GEE methods to be aware of more significant benefits. In chapter 1, I expressed excitement in that I thought GEE could act as a middle ground between SNAP/ENVI and R studio, but after this week I don't think this is the correct verbiage. I think GEE provides an incredibly robust tool for the integration of multidisciplinary methods into RS but with a highlighted, underlined, italicized, bold caveat of ==<u>***scale***</u>==.
+To be clear, there is much about GEE that I found impressive this week. Certainly the concept of global processing and model training/testing displayed in the papers is exciting. However, I feel that I both overestimated the changes that the client/server system could make to my own current studies and lack sufficient knowledge of GEE methods to be aware of more significant benefits. In chapter 1, I expressed excitement in that I thought GEE could act as a middle ground between SNAP/ENVI and R studio, but after this week I don't think this is the correct verbiage. I think GEE provides an incredibly robust tool for the integration of multidisciplinary methods into RS but with a highlighted, underlined, italicized, bold caveat of <u>***scale***</u>.
 
 Because of this, I have asked myself a few questions this week regarding my potential use of GEE:
 

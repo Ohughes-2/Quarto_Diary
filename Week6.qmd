@@ -1,5 +1,108 @@
 ---
-title: "Week6"
+title: "Remote Sensing and Machine Learning"
 ---
 
-## Title
+## A Breath of Fresh Air
+
+Last week I expressed some frustration that perhaps Google Earth Engine was not the super tool that I imagined it to be at the start of the term. Although I still hold these general opinions, this week's topic of machine learning classification was somewhat of a welcome surprise. This weeks lecture made me realize that I had previously worked with supervised machine learning before in ENVI, I was simply unaware. During my undergrad R.S class, this process was simply called classification and didn't go into the weeds about the underlying methods. Speaking about regression and random forest as ML toots for classification led me to reread a practical from my previous class, and sure enough, we used training data in ENVI to classify and entire image of Northern California.
+
+![Classification of Northern California after the Carr Fire in 2018 unising ENVI](Images/no_cal.png)
+
+### Recent Troubles with Machine Learning
+
+Despite taking the Data Science for Spatial Systems class this term, many machine learning concepts and methods like random forest and neural networks have eluded my abilities of comprehension. Despite this, I feel like I learned more about machine learning from this week's single lecture and practical than the entirety of the DSSS class. I truly enjoyed working with GEE to import data from the server, clip to my county of birth in the USA, and classify its land using a random forest model. For the first time this term, the entire process behind the ML model was clear and understandable.
+
+### Improvements this Week
+
+Specifically using the code below, I was able to produce a classification of Ada County, Idaho, USA with 85% accuracy. I wholy feel that this metric could easily be improves, especially given the output image (also shown below), but that comes down to my own shortcomings in selecting the training data. This brings me to the main challenge of this week's methods. No ML model will ever be perfect, but I was surprised at just how poorly it performed the first go around. I was left with an accuracy around 62%. I went through 5 iterations of the code below each time adding more training data until I felt satisfied with the pattern of growing accuracy. In particular, the model faced great difficulty distinguishing high urban reflectance from desert bare earth reflectance.
+
+```{r, eval=FALSE}
+// // --------------------- pixel level --------------------------------
+
+var pixel_number= 1000;
+
+var urban_low_points=ee.FeatureCollection.randomPoints(Urban_low, pixel_number).map(function(i){
+  return i.set({'class': 1})})
+  
+var water_points=ee.FeatureCollection.randomPoints(Water, pixel_number).map(function(i){
+  return i.set({'class': 2})})
+  
+var urban_high_points=ee.FeatureCollection.randomPoints(Urban_high, pixel_number).map(function(i){
+  return i.set({'class': 3})})
+
+var grass_points=ee.FeatureCollection.randomPoints(Agg_Forest, pixel_number).map(function(i){
+  return i.set({'class': 4})})
+
+var bare_earth_points=ee.FeatureCollection.randomPoints(Desert, pixel_number).map(function(i){
+  return i.set({'class': 5})})
+
+// add a random column for test and traning split with values between 0 and 1
+var point_sample=ee.FeatureCollection([urban_low_points,
+                                  water_points,
+                                  urban_high_points,
+                                  grass_points,
+                                  bare_earth_points])
+                                  .flatten()
+                                  .randomColumn();
+
+// --------------------- train, test split --------------------------------
+                                    
+var split=0.7
+var training_sample = point_sample.filter(ee.Filter.lt('random', split));
+var validation_sample = point_sample.filter(ee.Filter.gte('random', split));
+
+// take samples from image for training and validation  
+var training = waytwo_clip.select(bands).sampleRegions({
+  collection: training_sample,
+  properties: ['class'],
+  scale: 10,
+});
+
+var validation = waytwo_clip.select(bands).sampleRegions({
+  collection: validation_sample,
+  properties: ['class'],
+  scale: 10
+});
+
+// // --------------------- train model --------------------------------
+
+var rf1_pixel = ee.Classifier.smileRandomForest(100)
+    .train(training, 'class');
+
+// Get information about the trained classifier.
+print('Results of RF trained classifier', rf1_pixel.explain());
+
+
+// // ---------------------  Conduct classification --------------------------------
+    
+var rf2_pixel = waytwo_clip.classify(rf1_pixel);
+
+Map.addLayer(rf2_pixel, {min: 1, max: 5, 
+  palette: ['d99282', '466b9f', 'ab0000', 'dfdfc2', 'b3ac9f']},
+  "RF_pixel");
+// // --------------------- Assess Accuracy --------------------------------
+
+var trainAccuracy = rf1_pixel.confusionMatrix();
+print('Resubstitution error matrix: ', trainAccuracy);
+print('Training overall accuracy: ', trainAccuracy.accuracy());
+
+var validated = validation.classify(rf1_pixel);
+
+var testAccuracy = validated.errorMatrix('class', 'classification');
+var consumers=testAccuracy.consumersAccuracy()
+
+print('Validation error matrix: ', testAccuracy);
+print('Validation overall accuracy: ', testAccuracy.accuracy())
+print('Validation consumer accuracy: ', consumers);
+
+```
+
+![Ada County, Idaho, USA depicting half of the Boise Metro Area and the surrounding desert and mountains](Images/ada_normal.png)
+
+![Classification of Ada County, notable lack of desert classification accuracy in the south and southwest](Images/ada_class.png)
+
+## More ML Applications in GEE
+
+Without having looked at the topic for this week, I discussed 2 papers last week that used machine learning in GEE as a segue to help me understand more complex methods possible in GEE. Both of them (@zhang_development_2020) created a global impervious area classifier and (@campos-taberner_global_2018) created a vegetation health classifier. This week, I wanted to look into another feature of Remote Sensing that I have worked with before, the time series.
+
+First, (@zhang_development_2020 s

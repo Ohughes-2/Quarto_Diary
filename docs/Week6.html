@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Week6 – Learning Diary</title>
+<title>7&nbsp; Remote Sensing and Machine Learning – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week6</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week6.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Remote Sensing and Machine Learning</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,43 +164,43 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Owen Hughes:</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Table of Contents</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R.S.</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to R.S.</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Quarto and Xaringan</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Quarto and Xaringan</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy Applications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy Applications</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week6.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week6</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Remote Sensing and Machine Learning</span></span></a>
   </div>
 </li>
     </ul>
@@ -158,7 +213,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#title" id="toc-title" class="nav-link active" data-scroll-target="#title"><span class="header-section-number">6.1</span> Title</a></li>
+  <li><a href="#a-breath-of-fresh-air" id="toc-a-breath-of-fresh-air" class="nav-link active" data-scroll-target="#a-breath-of-fresh-air"><span class="header-section-number">7.1</span> A Breath of Fresh Air</a>
+  <ul class="collapse">
+  <li><a href="#recent-troubles-with-machine-learning" id="toc-recent-troubles-with-machine-learning" class="nav-link" data-scroll-target="#recent-troubles-with-machine-learning"><span class="header-section-number">7.1.1</span> Recent Troubles with Machine Learning</a></li>
+  <li><a href="#improvements-this-week" id="toc-improvements-this-week" class="nav-link" data-scroll-target="#improvements-this-week"><span class="header-section-number">7.1.2</span> Improvements this Week</a></li>
+  </ul></li>
+  <li><a href="#more-ml-applications-in-gee" id="toc-more-ml-applications-in-gee" class="nav-link" data-scroll-target="#more-ml-applications-in-gee"><span class="header-section-number">7.2</span> More ML Applications in GEE</a></li>
   </ul>
 </nav>
     </div>
@@ -167,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week6</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Remote Sensing and Machine Learning</span></h1>
 </div>
 
 
@@ -184,10 +244,129 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="title" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="title"><span class="header-section-number">6.1</span> Title</h2>
+<section id="a-breath-of-fresh-air" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="a-breath-of-fresh-air"><span class="header-section-number">7.1</span> A Breath of Fresh Air</h2>
+<p>Last week I expressed some frustration that perhaps Google Earth Engine was not the super tool that I imagined it to be at the start of the term. Although I still hold these general opinions, this week’s topic of machine learning classification was somewhat of a welcome surprise. This weeks lecture made me realize that I had previously worked with supervised machine learning before in ENVI, I was simply unaware. During my undergrad R.S class, this process was simply called classification and didn’t go into the weeds about the underlying methods. Speaking about regression and random forest as ML toots for classification led me to reread a practical from my previous class, and sure enough, we used training data in ENVI to classify and entire image of Northern California.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/no_cal.png" class="img-fluid figure-img"></p>
+<figcaption>Classification of Northern California after the Carr Fire in 2018 unising ENVI</figcaption>
+</figure>
+</div>
+<section id="recent-troubles-with-machine-learning" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="recent-troubles-with-machine-learning"><span class="header-section-number">7.1.1</span> Recent Troubles with Machine Learning</h3>
+<p>Despite taking the Data Science for Spatial Systems class this term, many machine learning concepts and methods like random forest and neural networks have eluded my abilities of comprehension. Despite this, I feel like I learned more about machine learning from this week’s single lecture and practical than the entirety of the DSSS class. I truly enjoyed working with GEE to import data from the server, clip to my county of birth in the USA, and classify its land using a random forest model. For the first time this term, the entire process behind the ML model was clear and understandable.</p>
+</section>
+<section id="improvements-this-week" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="improvements-this-week"><span class="header-section-number">7.1.2</span> Improvements this Week</h3>
+<p>Specifically using the code below, I was able to produce a classification of Ada County, Idaho, USA with 85% accuracy. I wholy feel that this metric could easily be improves, especially given the output image (also shown below), but that comes down to my own shortcomings in selecting the training data. This brings me to the main challenge of this week’s methods. No ML model will ever be perfect, but I was surprised at just how poorly it performed the first go around. I was left with an accuracy around 62%. I went through 5 iterations of the code below each time adding more training data until I felt satisfied with the pattern of growing accuracy. In particular, the model faced great difficulty distinguishing high urban reflectance from desert bare earth reflectance.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span><span class="er">/</span> <span class="er">//</span> <span class="sc">---------------------</span> pixel level <span class="sc">--------------------------------</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>var pixel_number<span class="ot">=</span> <span class="dv">1000</span>;</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>var urban_low_points<span class="ot">=</span><span class="fu">ee.FeatureCollection.randomPoints</span>(Urban_low, pixel_number)<span class="fu">.map</span>(<span class="cf">function</span>(i){</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  return <span class="fu">i.set</span>({<span class="st">'class'</span><span class="sc">:</span> <span class="dv">1</span>})})</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>var water_points<span class="ot">=</span><span class="fu">ee.FeatureCollection.randomPoints</span>(Water, pixel_number)<span class="fu">.map</span>(<span class="cf">function</span>(i){</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  return <span class="fu">i.set</span>({<span class="st">'class'</span><span class="sc">:</span> <span class="dv">2</span>})})</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>var urban_high_points<span class="ot">=</span><span class="fu">ee.FeatureCollection.randomPoints</span>(Urban_high, pixel_number)<span class="fu">.map</span>(<span class="cf">function</span>(i){</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  return <span class="fu">i.set</span>({<span class="st">'class'</span><span class="sc">:</span> <span class="dv">3</span>})})</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>var grass_points<span class="ot">=</span><span class="fu">ee.FeatureCollection.randomPoints</span>(Agg_Forest, pixel_number)<span class="fu">.map</span>(<span class="cf">function</span>(i){</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  return <span class="fu">i.set</span>({<span class="st">'class'</span><span class="sc">:</span> <span class="dv">4</span>})})</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>var bare_earth_points<span class="ot">=</span><span class="fu">ee.FeatureCollection.randomPoints</span>(Desert, pixel_number)<span class="fu">.map</span>(<span class="cf">function</span>(i){</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  return <span class="fu">i.set</span>({<span class="st">'class'</span><span class="sc">:</span> <span class="dv">5</span>})})</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span><span class="er">/</span> add a random column <span class="cf">for</span> test and traning split with values between <span class="dv">0</span> and <span class="dv">1</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>var point_sample<span class="ot">=</span><span class="fu">ee.FeatureCollection</span>([urban_low_points,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                                  water_points,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                                  urban_high_points,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                                  grass_points,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                                  bare_earth_points])</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">.flatten</span>()</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">.randomColumn</span>();</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span><span class="er">/</span> <span class="sc">---------------------</span> train, test split <span class="sc">--------------------------------</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>                                    </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>var split<span class="ot">=</span><span class="fl">0.7</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>var training_sample <span class="ot">=</span> <span class="fu">point_sample.filter</span>(<span class="fu">ee.Filter.lt</span>(<span class="st">'random'</span>, split));</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>var validation_sample <span class="ot">=</span> <span class="fu">point_sample.filter</span>(<span class="fu">ee.Filter.gte</span>(<span class="st">'random'</span>, split));</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span><span class="er">/</span> take samples from image <span class="cf">for</span> training and validation  </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>var training <span class="ot">=</span> <span class="fu">waytwo_clip.select</span>(bands)<span class="fu">.sampleRegions</span>({</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  collection<span class="sc">:</span> training_sample,</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  properties<span class="sc">:</span> [<span class="st">'class'</span>],</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  scale<span class="sc">:</span> <span class="dv">10</span>,</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>});</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>var validation <span class="ot">=</span> <span class="fu">waytwo_clip.select</span>(bands)<span class="fu">.sampleRegions</span>({</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  collection<span class="sc">:</span> validation_sample,</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  properties<span class="sc">:</span> [<span class="st">'class'</span>],</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  scale<span class="sc">:</span> <span class="dv">10</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>});</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span><span class="er">/</span> <span class="er">//</span> <span class="sc">---------------------</span> train model <span class="sc">--------------------------------</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>var rf1_pixel <span class="ot">=</span> <span class="fu">ee.Classifier.smileRandomForest</span>(<span class="dv">100</span>)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.train</span>(training, <span class="st">'class'</span>);</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span><span class="er">/</span> Get information about the trained classifier.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Results of RF trained classifier'</span>, <span class="fu">rf1_pixel.explain</span>());</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span><span class="er">/</span> <span class="er">//</span> <span class="sc">---------------------</span>  Conduct classification <span class="sc">--------------------------------</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>var rf2_pixel <span class="ot">=</span> <span class="fu">waytwo_clip.classify</span>(rf1_pixel);</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">Map.addLayer</span>(rf2_pixel, {min<span class="sc">:</span> <span class="dv">1</span>, max<span class="sc">:</span> <span class="dv">5</span>, </span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  palette<span class="sc">:</span> [<span class="st">'d99282'</span>, <span class="st">'466b9f'</span>, <span class="st">'ab0000'</span>, <span class="st">'dfdfc2'</span>, <span class="st">'b3ac9f'</span>]},</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  <span class="st">"RF_pixel"</span>);</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span><span class="er">/</span> <span class="er">//</span> <span class="sc">---------------------</span> Assess Accuracy <span class="sc">--------------------------------</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>var trainAccuracy <span class="ot">=</span> <span class="fu">rf1_pixel.confusionMatrix</span>();</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Resubstitution error matrix: '</span>, trainAccuracy);</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Training overall accuracy: '</span>, <span class="fu">trainAccuracy.accuracy</span>());</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>var validated <span class="ot">=</span> <span class="fu">validation.classify</span>(rf1_pixel);</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>var testAccuracy <span class="ot">=</span> <span class="fu">validated.errorMatrix</span>(<span class="st">'class'</span>, <span class="st">'classification'</span>);</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>var consumers<span class="ot">=</span><span class="fu">testAccuracy.consumersAccuracy</span>()</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Validation error matrix: '</span>, testAccuracy);</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Validation overall accuracy: '</span>, <span class="fu">testAccuracy.accuracy</span>())</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Validation consumer accuracy: '</span>, consumers);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/ada_normal.png" class="img-fluid figure-img"></p>
+<figcaption>Ada County, Idaho, USA depicting half of the Boise Metro Area and the surrounding desert and mountains</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/ada_class.png" class="img-fluid figure-img"></p>
+<figcaption>Classification of Ada County, notable lack of desert classification accuracy in the south and southwest</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="more-ml-applications-in-gee" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="more-ml-applications-in-gee"><span class="header-section-number">7.2</span> More ML Applications in GEE</h2>
+<p>Without having looked at the topic for this week, I discussed 2 papers last week that used machine learning in GEE as a segue to help me understand more complex methods possible in GEE. Both of them (<span class="citation" data-cites="zhang_development_2020">Zhang et al. (<a href="#ref-zhang_development_2020" role="doc-biblioref">2020</a>)</span>) created a global impervious area classifier and (<span class="citation" data-cites="campos-taberner_global_2018">Campos-Taberner et al. (<a href="#ref-campos-taberner_global_2018" role="doc-biblioref">2018</a>)</span>) created a vegetation health classifier. This week, I wanted to look into another feature of Remote Sensing that I have worked with before, the time series.</p>
+<p>First, (<span class="citation" data-cites="zhang_development_2020">Zhang et al. (<a href="#ref-zhang_development_2020" role="doc-biblioref">2020</a>)</span> s</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-campos-taberner_global_2018" class="csl-entry" role="listitem">
+Campos-Taberner, Manuel, Álvaro Moreno-Martínez, Francisco Javier García-Haro, Gustau Camps-Valls, Nathaniel P. Robinson, Jens Kattge, and Steven W. Running. 2018. <span>“Global <span>Estimation</span> of <span>Biophysical</span> <span>Variables</span> from <span>Google</span> <span>Earth</span> <span>Engine</span> <span>Platform</span>.”</span> <em>Remote Sensing</em> 10 (8): 1167. <a href="https://doi.org/10.3390/rs10081167">https://doi.org/10.3390/rs10081167</a>.
+</div>
+<div id="ref-zhang_development_2020" class="csl-entry" role="listitem">
+Zhang, Xiao, Liangyun Liu, Changshan Wu, Xidong Chen, Yuan Gao, Shuai Xie, and Bing Zhang. 2020. <span>“Development of a Global 30 m Impervious Surface Map Using Multisource and Multitemporal Remote Sensing Datasets with the <span>Google</span> <span>Earth</span> <span>Engine</span> Platform.”</span> <em>Earth System Science Data</em> 12 (3): 1625–48. <a href="https://doi.org/10.5194/essd-12-1625-2020">https://doi.org/10.5194/essd-12-1625-2020</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -593,7 +772,7 @@ ul.task-list li input[type="checkbox"] {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./Week5.html" class="pagination-link" aria-label="Google Earth Engine">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

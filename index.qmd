@@ -1,16 +1,29 @@
-# Owen Hughes: {.unnumbered}
+# Table of Contents
 
-## Remote Sensing Learning Diary
+This diary explores my thoughts about each method we cover in class. This is my 3rd class dedicated to remote sensing with the previous 2 being from undergrad. Specifically, I have experience (from the first class) using ENVI to perform many remote sensing tasks such as classification and LiDAR point cloud analysis, and from the second class I have used Python as a tool mostly for classification and difference index analysis.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Additionally, I was part of a team from January-June 2025 that was using LiDAR data (DEM) to assess solar energy potential of rooftops in Northern Virginia, USA. I draw on these experiences in this diary as a source of questions and background for both the methods covered and literature analysis.
 
-```{r}
-1 + 1
-```
+Chapter 1:
 
-## ¿Qué lo que mancitos míos?, ¡'pero que ustedes 'tán súpel bien diache!
+-   [Introduction to Remote Sensing](1  Introduction to R.S. – Learning Diary)
 
-```{r}
-f <- 456/34 + sqrt(27)
-print(round(f,2))
-```
+Chapter 2:
+
+-   [Quarto Books and Xaringan Presentations](2  Introduction to Quarto and Xaringan – Learning Diary)
+
+Chapter 3
+
+-   [Corrections and Enhancements](3  Corrections and Enhancements – Learning Diary)
+
+Chapter 4
+
+-   [Project Case Study: Solar Energy in Loudoun County, Virginia](4  Policy Applications – Learning Diary)
+
+Chapter 5
+
+-   [Introduction to Google Earth Engine](5  Google Earth Engine – Learning Diary)
+
+Chapter 6
+
+-   [Remote Sensing and Machine Learning](6  Week6 – Learning Diary)
