@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Week7 – Learning Diary</title>
+<title>8&nbsp; More Machine Learning for Classification – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week7.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week7</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week7.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More Machine Learning for Classification</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -151,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week7.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week7</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More Machine Learning for Classification</span></span></a>
   </div>
 </li>
     </ul>
@@ -164,7 +184,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#content-summary" id="toc-content-summary" class="nav-link active" data-scroll-target="#content-summary"><span class="header-section-number">8.1</span> Content Summary</a></li>
+  <li><a href="#classification-pt.-2" id="toc-classification-pt.-2" class="nav-link active" data-scroll-target="#classification-pt.-2"><span class="header-section-number">8.1</span> Classification Pt. 2:</a>
+  <ul class="collapse">
+  <li><a href="#sub-pixel-classification" id="toc-sub-pixel-classification" class="nav-link" data-scroll-target="#sub-pixel-classification"><span class="header-section-number">8.1.1</span> Sub-Pixel Classification</a></li>
+  <li><a href="#object-based-image-analysis-obia" id="toc-object-based-image-analysis-obia" class="nav-link" data-scroll-target="#object-based-image-analysis-obia"><span class="header-section-number">8.1.2</span> Object Based Image Analysis (OBIA)</a></li>
+  <li><a href="#takeaways" id="toc-takeaways" class="nav-link" data-scroll-target="#takeaways"><span class="header-section-number">8.1.3</span> Takeaways</a></li>
+  </ul></li>
+  <li><a href="#diversity-in-classification-purpose" id="toc-diversity-in-classification-purpose" class="nav-link" data-scroll-target="#diversity-in-classification-purpose"><span class="header-section-number">8.2</span> Diversity in Classification Purpose</a>
+  <ul class="collapse">
+  <li><a href="#micro-macro-scales" id="toc-micro-macro-scales" class="nav-link" data-scroll-target="#micro-macro-scales"><span class="header-section-number">8.2.1</span> Micro &amp; Macro Scales</a></li>
+  </ul></li>
+  <li><a href="#were-really-getting-somewhere-now" id="toc-were-really-getting-somewhere-now" class="nav-link" data-scroll-target="#were-really-getting-somewhere-now"><span class="header-section-number">8.3</span> We’re Really Getting Somewhere Now</a>
+  <ul class="collapse">
+  <li><a href="#ambiguous-region-classifications" id="toc-ambiguous-region-classifications" class="nav-link" data-scroll-target="#ambiguous-region-classifications"><span class="header-section-number">8.3.1</span> Ambiguous Region Classifications</a></li>
+  <li><a href="#time-series" id="toc-time-series" class="nav-link" data-scroll-target="#time-series"><span class="header-section-number">8.3.2</span> Time Series</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">8.4</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -173,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week7</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More Machine Learning for Classification</span></h1>
 </div>
 
 
@@ -190,10 +225,67 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="content-summary" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="content-summary"><span class="header-section-number">8.1</span> Content Summary</h2>
+<section id="classification-pt.-2" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="classification-pt.-2"><span class="header-section-number">8.1</span> Classification Pt. 2:</h2>
+<p>Last week’s introduction to CART based classification was very conceptual to me as I had done it before, albeit without realizing. Additionally, using just pixels for the training and test data assisted in its simplicity as each pixel is classified based on the the training information. With this, the addition of sub-pixel and object based classification this week proved to be a bit more of a conceptual challenge for me. Let’s run through some of the outputs from the practical and some conclusions I’ve drawn from the process.</p>
+<section id="sub-pixel-classification" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="sub-pixel-classification"><span class="header-section-number">8.1.1</span> Sub-Pixel Classification</h3>
+<p>Sub-pixel classification is most similar to last week. Each pixel receives a class based upon which fraction band exceeds a threshold of presence within each pixel. In this case I created classes for urban, residential, forest, and water environments in Chesterfield, Virginia, USA. Despite the classification broadly capturing the pattern of development, I think my selection of training data was a significant limitation. Residential areas in Chesterfield are covered in trees which made the differentiation between the forest and residential classes difficult. This can be seen in the image below. The southwestern part of Chesterfield is very sparse and forested, yet the classification indicates significant residential areas.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/cfield_sub_pix.png" class="img-fluid figure-img"></p>
+<figcaption>Chesterfield County, VA sub pixel classification - Red: Urban, Blue: Residential, Light Green: Water, Dark Green: Forest</figcaption>
+</figure>
+</div>
+</section>
+<section id="object-based-image-analysis-obia" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="object-based-image-analysis-obia"><span class="header-section-number">8.1.2</span> Object Based Image Analysis (OBIA)</h3>
+<p>The purpose of classifying with OBIA seemed more difficult to understand while completing the practical, however a few days later it seems relevant for certain purposes (more on that in a bit). After creating objects with the SNIC grid and classifying them entirely, the image below reflects the forested nature of southwestern part of the county better than in the sub-pixel. Though, again issues with the residential/forest mix up are evident this time in the north, and large lake was classified as a forest.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/cfield_obia.png" class="img-fluid figure-img"></p>
+<figcaption>Chesterfield County, VA OBIA classification - Pink: Urban, Beige: Residential, Black: Water, Dark Green: Forest</figcaption>
+</figure>
+</div>
+</section>
+<section id="takeaways" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="takeaways"><span class="header-section-number">8.1.3</span> Takeaways</h3>
+<p>I ran into the same issue as last week in which the training data failed to accurately distinguish between different classes. Much of this issue is on me as I selected the train data, but this problem helped me understand the utility of the OBIA. Using a cluster of pixels changes the dynamic of the classification from categorizing each individual cell into one of pattern creation. Despite the sub-pixel correctly reflecting detailed land use l in much of Chesterfield County, the grouped nature of the OBIA seems to bypass some of the pitfalls of the training data while still reflecting the general environments of the area.</p>
+</section>
+</section>
+<section id="diversity-in-classification-purpose" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="diversity-in-classification-purpose"><span class="header-section-number">8.2</span> Diversity in Classification Purpose</h2>
+<section id="micro-macro-scales" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="micro-macro-scales"><span class="header-section-number">8.2.1</span> Micro &amp; Macro Scales</h3>
+<p>One of the primary takeaways from this week must be that classification is more than a simple delineation of existing properties within an area, there are numerous insights that one can gain from different methods of classification, as mentioned above. This week focused on classification in a micro-scale and a macro-scale which inherently answer different questions.</p>
+<p>All imagery regardless of spatial resolution is at heart, a generalization of the land the image captures. The existence of multiple objects of different spectral nature particularly within larger pixels like Landsat means that common analyses like NDVI (or other difference indexes) can suffer from over-generalization as trees in a city can be overshadowed by buildings or roads (<span class="citation" data-cites="li_extracting_2023">Li et al. (<a href="#ref-li_extracting_2023" role="doc-biblioref">2023</a>)</span>). When it becomes relevant to analyze the health of vegetation of residential area growth, mixed pixels, particularly in cities, can significantly conceal meaningful patterns. In the case of (<span class="citation" data-cites="li_extracting_2023">Li et al. (<a href="#ref-li_extracting_2023" role="doc-biblioref">2023</a>)</span>), this meant that Wuhan, China could not accurately ascertain data about its urban vegetation health without the use of sub-pixel NDVI metrics and endmember analysis.</p>
+<p>Despite the ability to achieve more fine-grained patterns with sub-pixel classification, there are also times when the researcher, city, organization, etc benefits from a more coarse method of classifications. In a sense, to describe the feeling of a space, not necessarily it’s most specific details. OBIA methods excel at identifying significant spectral changes which allow them to group areas together, however, this does lead to misclassifications of individual pixels (<span class="citation" data-cites="ghorbanzadeh_landslide_2022">Ghorbanzadeh et al. (<a href="#ref-ghorbanzadeh_landslide_2022" role="doc-biblioref">2022</a>)</span>). For this reason, OBIA methods can be partially calibrated by image segmentation layers to both maintain the benefits of object grouping while taking into account targeted pixel qualities. (<span class="citation" data-cites="ghorbanzadeh_landslide_2022">Ghorbanzadeh et al. (<a href="#ref-ghorbanzadeh_landslide_2022" role="doc-biblioref">2022</a>)</span>) used this method to classify areas threatened by landslides in Taiwan by differentiating between fluvial, riparian, and landslide zones which can often have similar spectral qualities.</p>
+</section>
+</section>
+<section id="were-really-getting-somewhere-now" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="were-really-getting-somewhere-now"><span class="header-section-number">8.3</span> We’re Really Getting Somewhere Now</h2>
+<p>Last week’s session on classification, though important to lay the foundations, left me with a gap in understanding the potential and purpose of classification. In the reflection I mainly spoke about potential applications in our group presentation and GEE as a whole, rather than the methods I had performed that week. In a sense, I felt as if I was missing the “<strong>WHY</strong>” factor. Okay, great I can see which areas are built up, which areas are neighborhoods, which areas are bare earth, etc, but I could do that with the base RGB image. This week, however, has helped me to fill in that empty “<strong>WHY</strong>” factor. Specifically I want to reflect on 2 simple concepts that I gave a bit more thought to this week.</p>
+<section id="ambiguous-region-classifications" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="ambiguous-region-classifications"><span class="header-section-number">8.3.1</span> Ambiguous Region Classifications</h3>
+<p>I think one of the reasons I felt so indifferent about classification last week was that in the practical I only classified land cover types that I was familiar with in a place that I was familiar with. I could instantly see the issues or praise the accuracy of the classification once the CART model ran. This took away from the meaning of the classification as, again, I could see the pattern in the RGB image. However, the papers I read this week, and looking back at those from last week display that much of the value of classification comes from categorizing non-obvious land cover differences. Slight changes in NDVI, slope, temperature, or even mineral composition detected by the sensor can distinguish between land covers that a viewer and the RGB image can’t do.</p>
+</section>
+<section id="time-series" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="time-series"><span class="header-section-number">8.3.2</span> Time Series</h3>
+<p>Unlike the ambiguous region classifications, I have been aware of the utility of the time series since I took my first RS class in undergrad. However, 3 of the 4 papers I read for the classification sessions involve a time series and analyze changes in classification over time. This has created incredible insight into existing patterns, but more importantly the patterns created are the most valuable piece for informing policy. My group has structured our project of one that looks to provide Manaus, Brazil with a blueprint of potential options based upon where informal settlements are growing. Similarly to the NDVI paper this week, this would require identifying a pattern of change in an ambiguous variable and presenting in an easily understandable way.</p>
+</section>
+</section>
+<section id="references" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="references"><span class="header-section-number">8.4</span> References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ghorbanzadeh_landslide_2022" class="csl-entry" role="listitem">
+Ghorbanzadeh, Omid, Hejar Shahabi, Alessandro Crivellari, Saeid Homayouni, Thomas Blaschke, and Pedram Ghamisi. 2022. <span>“Landslide Detection Using Deep Learning and Object-Based Image Analysis.”</span> <em>Landslides</em> 19 (4): 929–39. <a href="https://doi.org/10.1007/s10346-021-01843-x">https://doi.org/10.1007/s10346-021-01843-x</a>.
+</div>
+<div id="ref-li_extracting_2023" class="csl-entry" role="listitem">
+Li, Shuxu, Zheng Zhou, Rongfei Ma, Shishi Liu, and Qingfeng Guan. 2023. <span>“Extracting Subpixel Vegetation <span>NDVI</span> Time Series for Evaluating the Mixed Pixel Effect on <span>GPP</span> Estimation in Urban Areas.”</span> <em>International Journal of Digital Earth</em> 16 (1): 3222–38. <a href="https://doi.org/10.1080/17538947.2023.2246945">https://doi.org/10.1080/17538947.2023.2246945</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
