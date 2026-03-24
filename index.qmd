@@ -31,3 +31,7 @@ Week 7:
 Week 8:
 
 -   [Sub-Pixel and OBIA Classification](https://ohughes-2.github.io/Quarto_Diary/Week7.html)
+
+Week 9:
+
+-   [SAR Damage Detection](https://ohughes-2.github.io/Quarto_Diary/Week8.html)

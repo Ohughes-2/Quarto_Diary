@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; Week8.qmd – Learning Diary</title>
+<title>9&nbsp; Blast Damage Detection with Ollie – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week8.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Week8.qmd</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week8.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Blast Damage Detection with Ollie</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -157,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week8.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Week8.qmd</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Blast Damage Detection with Ollie</span></span></a>
   </div>
 </li>
     </ul>
@@ -165,15 +185,34 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#synthetic-aperture-radar-sar" id="toc-synthetic-aperture-radar-sar" class="nav-link active" data-scroll-target="#synthetic-aperture-radar-sar"><span class="header-section-number">9.1</span> Synthetic-Aperture Radar (SAR)</a>
+  <ul class="collapse">
+  <li><a href="#not-just-explosions" id="toc-not-just-explosions" class="nav-link" data-scroll-target="#not-just-explosions"><span class="header-section-number">9.1.1</span> Not Just Explosions</a></li>
+  <li><a href="#ive-just-struck-gold-but-i-want-diamonds" id="toc-ive-just-struck-gold-but-i-want-diamonds" class="nav-link" data-scroll-target="#ive-just-struck-gold-but-i-want-diamonds"><span class="header-section-number">9.1.2</span> I’ve Just Struck Gold, But I want Diamonds</a></li>
+  </ul></li>
+  <li><a href="#additional-utility" id="toc-additional-utility" class="nav-link" data-scroll-target="#additional-utility"><span class="header-section-number">9.2</span> Additional Utility</a>
+  <ul class="collapse">
+  <li><a href="#comparative-analysis" id="toc-comparative-analysis" class="nav-link" data-scroll-target="#comparative-analysis"><span class="header-section-number">9.2.1</span> Comparative Analysis</a></li>
+  <li><a href="#more-machine-learning-and-outside-data-input" id="toc-more-machine-learning-and-outside-data-input" class="nav-link" data-scroll-target="#more-machine-learning-and-outside-data-input"><span class="header-section-number">9.2.2</span> More Machine Learning and Outside Data Input</a></li>
+  </ul></li>
+  <li><a href="#and-scene-well-almost" id="toc-and-scene-well-almost" class="nav-link" data-scroll-target="#and-scene-well-almost"><span class="header-section-number">9.3</span> And Scene… well almost</a>
+  <ul class="collapse">
+  <li><a href="#overall-reflection" id="toc-overall-reflection" class="nav-link" data-scroll-target="#overall-reflection"><span class="header-section-number">9.3.1</span> Overall Reflection</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Week8.qmd</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Blast Damage Detection with Ollie</span></h1>
 </div>
 
 
@@ -190,8 +229,56 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="synthetic-aperture-radar-sar" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="synthetic-aperture-radar-sar"><span class="header-section-number">9.1</span> Synthetic-Aperture Radar (SAR)</h2>
+<p>This week was quite fun. I enjoyed hopping into Ollie’s CASA0025 practical to get a sense of the capabilities of SAR to detect changes in buildings after explosions. He ran through his work in Gaza again and we applied the same (though simplified) techniques to Beirut.</p>
+<section id="not-just-explosions" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="not-just-explosions"><span class="header-section-number">9.1.1</span> Not Just Explosions</h3>
+<p>One of the main points from Ollie, and for that matter by all CASA lecturers I’ve had, is that any method can be adapted for near endless scenarios; and this practical is a great example. I applied the building damage detection method (briefly outlined below) to Rolling Fork, Mississippi, a Small town that experienced a devastating tornado in March, 2023.</p>
+<p><strong>Brief Summary of Methods</strong></p>
+<ul>
+<li><p>Attain SAR imagery for around 8 months before the disaster and 2 months after</p></li>
+<li><p>Calculate mean and SD pixel values pre and post disaster</p></li>
+<li><p>Run a t-test to determine if and in which pixels significant change (damage) has occurred</p></li>
+<li><p>Print the damage in a defined radius to the GEE map</p></li>
+</ul>
+<p>In the damage image below, the near straight line of damage from SW to NE is consistent with the movement of tornadoes, particularly through a small area like Rolling Fork.</p>
+<p><img src="Images/rolling_fork_pre.png" class="img-fluid" alt="Rolling Fork Pre-Disaster: Simply for Display of Town Size"> <img src="Images/rolling_fork_post.png" class="img-fluid" alt="Rolling Fork Post-Disaster: Displaying Areas of Significant Damage"></p>
+</section>
+<section id="ive-just-struck-gold-but-i-want-diamonds" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="ive-just-struck-gold-but-i-want-diamonds"><span class="header-section-number">9.1.2</span> I’ve Just Struck Gold, But I want Diamonds</h3>
+<p>Despite the overall good time had in this practical, I felt there were a few tasks from previous practicals that could have made it even better. In the past, a lot of our analysis included clipped images rather than setting a radius. To me is seems more practical for a city, town, county, region, etc to clip the study area to their administrative boundary, particularly if the goal is informing policy which follows said administrative boundary. This may also aid in solving an additional problem I encountered regarding water. In some areas (and I still don’t know why) tidal water bodies would appear as great areas of change. This did not occur in Beirut, but did when changing to Lahaina, Hawaii, and Southern Louisiana. I assumed taking the mean and SD of each pixel would avoid this, but regardless the issue persisted. Clipping the study area to just Lahaina would eliminate additional noise created by the tidal changes.</p>
+</section>
+</section>
+<section id="additional-utility" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="additional-utility"><span class="header-section-number">9.2</span> Additional Utility</h2>
+<section id="comparative-analysis" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="comparative-analysis"><span class="header-section-number">9.2.1</span> Comparative Analysis</h3>
+<p>An additional element lacking from the practical is a comparison and/or integration of the SAR band methods with optical imagery methods. Combining the two types of imagery allows for the validation and tuning of the SAR methods given its advantages detecting through clouds (<span class="citation" data-cites="hamidi_fast_2023">Hamidi et al. (<a href="#ref-hamidi_fast_2023" role="doc-biblioref">2023</a>)</span>). Specifically, a normalized difference flood index can be created with the SAR back scatter data while an optical flooding index can be used to specify the binary flooded/not flooded threshold (<span class="citation" data-cites="hamidi_fast_2023">Hamidi et al. (<a href="#ref-hamidi_fast_2023" role="doc-biblioref">2023</a>)</span>). This two part dynamic allows both types of imagery to add distinct purpose to the results. SAR maintains is place as the default imagery for the flood detection with a specified threshold as it still functions equally regardless of weather condition, while the optical imagery offers the researcher and additional stakeholders a more conceptual view of the problem given that optical imagery reflects what we see with our eyes. Applying this idea to the examples above may include tuning the damage threshold to avoid extraneous damage information in rural/agricultural fields.</p>
+</section>
+<section id="more-machine-learning-and-outside-data-input" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="more-machine-learning-and-outside-data-input"><span class="header-section-number">9.2.2</span> More Machine Learning and Outside Data Input</h3>
+<p>While performing classification in GEE, the training data was generated directly from the images themselves; usually creating sample polygons representative of certain classes. However, SAR imagery can be used alongside already known qualities of certain areas. Specifically, binary and manual assessments of road qualities pre and post landslide can be attached as pixel values and then trained in a deep learning model to predict a change in damage of other roads (<span class="citation" data-cites="karimzadeh_deep_2022">Karimzadeh et al. (<a href="#ref-karimzadeh_deep_2022" role="doc-biblioref">2022</a>)</span>). This displays the capability of image analysis to interact with crowdsourced data, further supporting the notion that much remote sensing analysis can be open source and participatory. With this, SAR analysis becomes a particularly valuable tool for policy consulting as Sentinel 1 provides fairly high spatial and temporal resolution, and as seen above, it can be integrated along with additional data sources collected by any given organization (<span class="citation" data-cites="karimzadeh_deep_2022">Karimzadeh et al. (<a href="#ref-karimzadeh_deep_2022" role="doc-biblioref">2022</a>)</span>).</p>
+</section>
+</section>
+<section id="and-scene-well-almost" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="and-scene-well-almost"><span class="header-section-number">9.3</span> And Scene… well almost</h2>
+<p>By now you’re well aware of my initial aversion to GEE and subsequent reductions in rancor over the past weeks, and let’s just say the ball keeps rolling. This week was a huge step up for my insight into policy, academic, and private industry used for GEE as a whole, but of course SAR data as well. Last week I wrote about the <strong>why</strong> factor of classification and how seeing a few practical applications helped me look at classification beyond a simple description of what’s on the ground. In much the same way, though I’d never worked with SAR imagery before, the lecture/practical on SAR coherence seemed immediately powerful for policy advocacy. Perhaps this was clearer because of my work on the final presentation and/or some other lessons I took away from previous week, but I’m certainly warming up to GEE far more than what I expected 3 weeks ago.</p>
+<section id="overall-reflection" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="overall-reflection"><span class="header-section-number">9.3.1</span> Overall Reflection</h3>
+<p>That being said, I also want to take some space to reflect on the class and this diary as a whole. This was my third R.S. based class and by a noticeable distance the most in depth and thought provoking (partially due to this very assignment). Despite this, much of the content discussed was at least broadly familiar. What I had not considered in my previous classes were the connections of RS to real world scenarios. With that, the lectures, presentation, and these reflections have forced me to consider the methods taught from outside of the context of the classroom. Luckily I had some experience working with the <a href="https://www.novasolarmap.com/">Northern Virginia Solar Map</a> but this only used LiDAR data in ArcGIS which felt quite limiting and time consuming as a method of action. Perhaps the greatest takeaway (which applies to other classes as well) has been to consider Occam’s razor when proposing a project. I’ve noticed that many of the papers I’ve gone through in this assignment support their analysis on only a few difference indexes of textures analyses. Even with the addition of training an ML model, the concepts behind testing vegetation health, land subsidence, or landuse changes remain largely simple. If I had one sentence to advise myself and others in the future, I’d say, “your project only needs to do what it needs to do.”</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-hamidi_fast_2023" class="csl-entry" role="listitem">
+Hamidi, Ebrahim, Brad G. Peter, David F. Munoz, Hamed Moftakhari, and Hamid Moradkhani. 2023. <span>“Fast Flood Extent Monitoring with <span>SAR</span> Change Detection Using Google Earth Engine.”</span> <em><span>IEEE</span> Transactions on Geoscience and Remote Sensing</em> 61: 1–19. <a href="https://doi.org/10.1109/TGRS.2023.3240097">https://doi.org/10.1109/TGRS.2023.3240097</a>.
+</div>
+<div id="ref-karimzadeh_deep_2022" class="csl-entry" role="listitem">
+Karimzadeh, Sadra, Mohammad Ghasemi, Masashi Matsuoka, Koichi Yagi, and Abdullah Can Zulfikar. 2022. <span>“A Deep Learning Model for Road Damage Detection After an Earthquake Based on Synthetic Aperture Radar (<span>SAR</span>) and Field Datasets.”</span> <em><span>IEEE</span> Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em> 15: 5753–65. <a href="https://doi.org/10.1109/JSTARS.2022.3189875">https://doi.org/10.1109/JSTARS.2022.3189875</a>.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

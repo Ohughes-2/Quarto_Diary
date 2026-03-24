@@ -24,7 +24,7 @@ The following code shows the PCA code run in GEE. The code from corrections week
 
 ### Any Problems?
 
-Despite the clear benefits of processing time, accessible data, user accessibility, I am concerned by a few traits of Google Earth Engine. Laborious tasks still require time to fully process and load, like the PCA above, and I simply don't have enough experience with GEE to be confident enough in its abilities to speed up a dissertation sized project for example. Additionally, the caveat of Google adding limits to large processing functions further suggests to me the GEE is not a sustainable application to use in a realtively small self guided project without a budget, like a masters thesis.
+Despite the clear benefits of processing time, accessible data, user accessibility, I am concerned by a few traits of Google Earth Engine. Laborious tasks still require time to fully process and load, like the PCA above, and I simply don't have enough experience with GEE to be confident enough in its abilities to speed up a dissertation sized project for example. Additionally, the caveat of Google adding limits to large processing functions further suggests to me the GEE is not a sustainable application to use in a relatively small self guided project without a budget, like a masters thesis.
 
 ## Research Capabilities
 
