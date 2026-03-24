@@ -56,6 +56,6 @@ Because of this, I have asked myself a few questions this week regarding my pote
 
 -   Yes, but I don't think there would have been an improvement
 
-Despite the generally bleak nature of these responses, this reflects more about me than GEE. The simple fact is that I don't see myself participating in a global or other large scale project in the neat future. However, we'll see in the coming weeks if my attitude shifts with more practice with GEE and its methods.
+Despite the generally bleak nature of these responses, this reflects more about me than GEE, that is to say I'm skeptical about my own use of GEE not GEE's overall utility. It's clear that large scale projects benefit greatly from external processing and the ability to integrate client side functionality makes GEE perfect for distributing projects across different platforms. Last term in CASA0013 Ollie gave a guest lecture in which he demonstrated the utility of SQL to process huge data sets incredibly quickly. This alongside what I know some of my friends are studying in CASA0025 suggests to me that GEE serves as a way to bridge both processing power and integrated/interactive display. I'm just not sure about my own use for it at the moment.
 
 ## References
