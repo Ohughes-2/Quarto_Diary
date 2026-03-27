@@ -5,7 +5,7 @@ project:
 book:
   title: "Learning Diary"
   author: "Owen Hughes"
-  date: "1/20/2026"
+  date: "3/27/2026"
   chapters:
     - index.qmd
     - Week1.qmd
