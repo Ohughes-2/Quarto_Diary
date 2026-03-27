@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Table of Contents</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Background</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Table of Contents</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Background</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -172,7 +172,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents"><span class="header-section-number">1</span> Table of Contents</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background"><span class="header-section-number">1</span> Background</a>
+  <ul class="collapse">
+  <li><a href="#a-bit-about-me" id="toc-a-bit-about-me" class="nav-link" data-scroll-target="#a-bit-about-me"><span class="header-section-number">1.0.1</span> A Bit About Me</a></li>
+  </ul></li>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents"><span class="header-section-number">2</span> Table of Contents</a></li>
   </ul>
 </nav>
     </div>
@@ -210,10 +214,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="table-of-contents" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Table of Contents</h1>
-<p>This diary explores my thoughts about each method we cover in class. This is my 3rd class dedicated to remote sensing with the previous 2 being from undergrad. Specifically, I have experience (from the first class) using ENVI to perform many remote sensing tasks such as classification and LiDAR point cloud analysis, and from the second class I have used Python as a tool mostly for classification and difference index analysis.</p>
-<p>Additionally, I was part of a team from January-June 2025 that was using LiDAR data (DEM) to assess solar energy potential of rooftops in Northern Virginia, USA. I draw on these experiences in this diary as a source of questions and background for both the methods covered and literature analysis.</p>
+<section id="background" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Background</h1>
+<section id="a-bit-about-me" class="level3" data-number="1.0.1">
+<h3 data-number="1.0.1" class="anchored" data-anchor-id="a-bit-about-me"><span class="header-section-number">1.0.1</span> A Bit About Me</h3>
+<p><img src="Images/cest_moi.jpg" class="img-fluid"></p>
+<p>Hello everyone, I’m Owen Hughes and welcome to my CASA0023: Remote Sensing learning diary. Originally I am from Boise, Idaho, (USA) but I spent most of my time growing up in the suburbs of Richmond, Virginia (USA), both of which will feature in the coming sections of diary. As of 2026 I am 22 years old and I came to CASA as a recent recipient of a BSc in Geography from George Mason University (GMU) in the Northern Virginia suburbs of Washington D.C. (another place that will feature in the diary). I previous took two remote sensing based classes at GMU, one also entitled Remote Sensing taught by <a href="https://science.gmu.edu/directory/konrad-wessels">Dr.&nbsp;Konrad Wessels</a> and the other entitled Satellite Image Analysis taught by <a href="https://science.gmu.edu/directory/edward-oughton">Dr.&nbsp;Edward Oughton</a>. Within these classes the primary method of analysis was either ENVI or Python so I am excited to explore both R and GEE based image analysis. Outside of the classroom my involvement with remote sensing is less profound, however I was part of team attempting to update the <a href="https://www.novasolarmap.com/">NOVA (Northern Virginia) Solar Map</a>; an tool used to help property owners estimate the potential solar energy output of their roofs in the southwestern D.C. suburbs. This project used LiDAR point cloud data, but unfortunately the bulk of the analysis too place in ArcGIS making the process rather closed off. I draw heavily from these three experiences to provide myself context for the content learned in the following weeks. Without sounding too vague, I want this class to expand upon the content I already know. I’ve used optical imagery a ton, what about SAR? I’ve only used LiDAR in ArcGIS, what about in R? I have only calculates simple difference indices, can they become more complex to measure more complex variables?</p>
+</section>
+</section>
+<section id="table-of-contents" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Table of Contents</h1>
 <p>Week 1:</p>
 <ul>
 <li><a href="https://ohughes-2.github.io/Quarto_Diary/Week1.html">Introduction to Remote Sensing</a></li>
